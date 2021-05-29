@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable}
+\usepackage[natbib=true,backend=biber]{biblatex} % biblatex + biber
+\addbibresource{main.bib} % biblatex
+
+\author{Artturi Tilanterä}
+
+\begin{document}
+
+\hyphenation{defusedxml JSON-Schemer }
+
+\begin{titlepage}
+\centering
+\Large{JAAL supplementary: XML and JSON} \\
+\vspace{5 mm}
+27.5.2021\\
+Artturi Tilanterä
+\end{titlepage}
+
+Document validation is a standard for XML \cite{W3C2012}, while the
+standardisation of JSON Schema at draft stage \cite{jsonschema-specification}.
+
+Table~\ref{tab:xml-json-comparison} compares XML and JSON, including their
+support with 20 most popular programming languages (Assembly and SQL excluded) \cite{tiobe2021}.
+There is support for reading, writing and schema validation for both XML and
+JSON in the following popular programming languages: C, C\#, C++, Go, Groovy,
+Java, JavaScript, Perl, PHP, Python, R, Ruby, and Swift.
+
+\begin{longtable}[h!]{|p{30mm}|p{25mm}|p{20mm}|p{25mm}|p{25mm}|}
+\caption{Comparison of XML and JSON} \\
+
+\hline
+\label{tab:xml-json-comparison} & \multicolumn{2}{c|}{XML} & \multicolumn{2}{c|}{JSON} \\
+\hline
+Language standard        & \multicolumn{2}{c|}{W3C Rec. 26 Nov 2008 \cite{W3C2008}} &
+                  \multicolumn{2}{c|}{ECMA-404 \cite{Ecma2017}} \\
+\hline
+Document validation & \multicolumn{2}{c|}{XSD (standard) \cite{W3C2012} } &
+\multicolumn{2}{c|}{JSON Schema \cite{jsonschema} } \\
+\hline
+\multicolumn{5}{|c|}{Support in programming languages} \\
+Language & Read \& Write & Schema & Read \& Write & Schema \\
+\hline
+C   & \multicolumn{2}{c|}{libxml \cite{libxml}} & several \cite{json} & several \cite{json, jsonschema-implementations} \\
+\hline
+C\#  & \multicolumn{2}{c|}{standard library~\cite{csharp-xml}}  & \multicolumn{2}{c|}{several \cite{json}} \\
+\hline
+C++ & \multicolumn{2}{c|}{Apache Xerces \cite{xerces-c++}} & \multicolumn{2}{c|}{ several \cite{json, jsonschema-implementations} } \\
+\hline
+Delphi / Object Pascal & standard library \cite{delphi-txml, delphi-write-xml} & MSXML \cite{delphi-validate-xml} & several \cite{json} & -- \\
+\hline
+Go & standard library \cite{go-xml} & xsd \cite{go-xsd} & standard library \cite{go-json} & several \cite{jsonschema-implementations} \\
+\hline
+FORTRAN & several \cite{xml-fortran, foxy} & XML-Fortran \cite{xml-fortran} & several \cite{json} & -- \\
+\hline
+Groovy & \multicolumn{2}{c|}{standard library \cite{groovy-xml, Shields2012}} & standard library \cite{groovy-json} & groovy-schema \cite{groovyschema} \\
+\hline
+Java & \multicolumn{2}{c|}{Apache Xerces \cite{xerces-java}} & \multicolumn{2}{c|}{ several \cite{json, jsonschema-implementations} } \\
+
+\hline
+JavaScript (browser) & builtin via DOM \cite{w3schools-xml-dom} & several \cite{npm-xsd} & builtin & several \cite{jsonschema-implementations} \\
+\hline
+JavaScript (Node.js) & several \cite{npm-xml} & several \cite{npm-xsd} & \multicolumn{2}{c|}{ several \cite{json, jsonschema-implementations} } \\
+\hline
+MATLAB & standard library \cite{matlab-xml} & Java standard library \cite{matlab-xsd} & several \cite{json} & -- \\
+\hline
+Perl & \multicolumn{2}{c|}{Apache Xerces \cite{xerces-perl}} & several \cite{perl-json} & several \cite{jsonschema-implementations} \\
+\hline
+PHP & \multicolumn{2}{c|}{standard library~\cite{php-xml}} & standard library \cite{php-json} &
+several \cite{jsonschema-implementations} \\
+\hline
+Python & standard library~\cite{python-library-xml}, defusedxml~\cite{defusedxml} & xmlschema \cite{xmlschema-python} & \multicolumn{2}{c|}{ several \cite{json, jsonschema-implementations} } \\
+\hline
+R & \multicolumn{2}{c|}{xml2~\cite{r-xml2}} & several \cite{json} & jsonvalidate \cite{r-jsonvalidate} \\
+\hline
+Ruby & \multicolumn{2}{c|}{ standard library~\cite{ruby-xml}, Nokogiri~\cite{nokogiri}} & several \cite{json} & JSONSchemer \cite{jsonschemer, jsonschema-implementations} \\
+\hline
+% Scala & \multicolumn{2}{c|}{scala-xml \cite{scala-xml, scala-xml-validation}} & & \\
+% \hline
+Swift & \multicolumn{2}{c|}{standard library \cite{swift-xml}} & standard library \cite{swift-json} & JSONSchema .swift \cite{swift-jsonschema} \\
+\hline
+Visual Basic & \multicolumn{2}{c|}{standard library \cite{visualbasic-xml-validation, visualbasic-xml}} & several \cite{json} & -- \\
+\hline
+\end{longtable}
+
+In general, both XML and JSON are well supported. JSON Schema has no
+implementation for Delphi, FORTRAN, and MATLAB. However, C++ libraries can be
+used with Delphi \cite{delphi-c++}, which offers a path for JSON Schema
+validation by C++. Similarly, a FORTRAN program can call C libraries, and a
+MATLAB program can call a Java Program \cite{fortran-iso-c-binding,
+matlab-java}.
+
+%\end{table}
+
+%\bibliographystyle{plain}
+%\bibliography{main.bib}
+
+\printbibliography % biber
+
+\end{document}
