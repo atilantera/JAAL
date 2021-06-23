@@ -7,7 +7,41 @@
   "properties": {
     "metadata": {
       "description": "Metadata about a JAAL recording",
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "jaalVersion": {
+          "description": "JAAL language version",
+          "type": "string"
+        },
+        "jaalGenerator": {
+          "description": "JAAL data generator software",
+          "type": "string"
+        },
+        "browser": {
+          "description": "Web browser name and version",
+          "type": "string"
+        },
+        "exercise": {
+          "description": "Information about the VAS exercise",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Name of the exercise",
+              "type": "string"
+            },
+            "collection": {
+              "description": "Name of the exercise collection",
+              "type": "string"
+            },
+            "runningLocation": {
+              "description": "URL of the configured and running exercise",
+              "type": "string"
+            }
+          },
+          "required": [ "name", "collection" ]
+        }
+      },
+      "required": [ "jaalVersion", "jaalGenerator", "exercise" ]
     },
     "definitions": {
       "description": "Definitions: style and model answer",
