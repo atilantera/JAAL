@@ -18,5 +18,5 @@ The schemas can be easily validated with the command-line tool *ajv-cli*.
 2. Install [ajv-cli](https://www.npmjs.com/package/ajv-cli)
    (e.g. from command line `npm install -g ajv-cli`)
 3. Validate from command line:
-   - `ajv -s jaal.json -d test/valid/*.json`
-   - `ajv -s jaal.json -d test/invalid/*.json`
+   - `ajv --spec=draft2020 -s jaal.json -d test/valid/*.json`
+   - `ajv --spec=draft2020 -s jaal.json -d test/invalid/*.json`
