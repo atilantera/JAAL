@@ -1,0 +1,6 @@
+{
+  "title": "metadata",
+  "description": "Metadata",
+  "type": "object",
+  "required": [ "metadata" ]
+}
