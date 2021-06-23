@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atilante/JAAL/blob/main/spec/jaal-1.1.json",
+  "title": "JAAL 1.1",
+  "description": "JSON-based algorithm animation language",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "description": "Metadata about a JAAL recording",
+      "type": "object"
+    },
+    "definitions": {
+      "description": "Definitions: style and model answer",
+      "type": "object"
+    },
+    "initialState": {
+      "description": "Initial state of data structures",
+      "type": "object"
+    },
+    "animation": {
+      "description": "Student's trace as algorithm animation",
+      "type": "object"
+    }
+  },
+  "required": [ "metadata", "definitions", "initialState", "animation" ]
+}

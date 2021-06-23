@@ -1,8 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/atilante/JAAL/blob/main/spec/jaal.json",
-  "title": "metadata",
-  "description": "Metadata",
-  "type": "object",
-  "required": [ "metadata" ]
-}
