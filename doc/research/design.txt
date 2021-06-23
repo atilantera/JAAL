@@ -1,0 +1,10 @@
+Template for design problems, from Wieringa's (2014) "Design Science Methodology for Information Systems and Software Engineering".
+
+
+- Improve <a problem context> (i) dissemination and accessibility of educational algorithm animations (ii) research of and learning with visual algorithm simulation
+
+- by <(re)designing an artifact> designing an algorithm animation language
+
+- that satisfies <some requirements> storage of algorithm animations both (a) semantically as data structures and their operations (b) vector graphics for human inspection
+
+- in order to  <help stakeholders achieve some goals> allow (1) instructors to embed algorithm animations in their learning material, (2) students to ask about their VAS exercise solutions from instructors, (3) researchers to study students' use of VAS exercises to develop the exercises further
