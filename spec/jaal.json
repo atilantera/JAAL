@@ -5,7 +5,7 @@
   "description": "JSON-based algorithm animation language",
   "type": "object",
   "properties": {
-    "metadata": { "$ref": "/schemas/metadata" },
+    "metadata": { "$ref": "metadata.json" },
     "definitions": {
       "description": "Definitions: style and model answer",
       "type": "object"
