@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jaal.fi/schemas/jaal",
+  "title": "JAAL 1.1",
+  "description": "JSON-based algorithm animation language",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "https://jaal.fi/schemas/metadata",
+      "title": "JAAL 1.1 metadata",
+      "description": "Metadata about a JAAL recording",
+      "type": "object",
+      "properties": {
+        "jaalVersion": {
+          "description": "JAAL language version",
+          "type": "string"
+        },
+        "jaalGenerator": {
+          "description": "JAAL data generator software",
+          "type": "string"
+        },
+        "browser": {
+          "description": "Web browser name and version",
+          "type": "string"
+        },
+        "exercise": {
+          "description": "Information about the VAS exercise",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Name of the exercise",
+              "type": "string"
+            },
+            "collection": {
+              "description": "Name of the exercise collection",
+              "type": "string"
+            },
+            "runningLocation": {
+              "description": "URL of the configured and running exercise",
+              "type": "string"
+            }
+          },
+          "required": ["name", "collection"]
+        }
+      },
+      "required": ["jaalVersion", "jaalGenerator", "exercise"]
+    },
+    "definitions": {
+      "description": "Definitions: style and model answer",
+      "type": "object"
+    },
+    "initialState": {
+      "description": "Initial state of data structures",
+      "type": "object"
+    },
+    "animation": {
+      "description": "Student's trace as algorithm animation",
+      "type": "object"
+    }
+  },
+  "required": ["metadata", "definitions", "initialState", "animation"]
+}

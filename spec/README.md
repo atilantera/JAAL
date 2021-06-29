@@ -20,12 +20,12 @@ The schemas can be easily validated with the command-line tool *ajv-cli*.
 3. Install [json-schema-ref-parser](https://github.com/APIDevTools/json-schema-ref-parser)
    (e.g. from command line `npm install @apidevtools/json-schema-ref-parser`)
 
-## Running tests
-
-`./test.sh` tests the JAAL JSON Schema in individual JSON files against JSON
-data in directory `test/`.
-
 ## Bundling
 
 `./build.sh` uses *json-schema-ref-parser* to combine individual JAAL JSON
 Schema files into a single file `bundle/jaal-bundle.json`.
+
+## Running tests
+
+Do the bundling first. Then `./test.sh` tests the JAAL JSON Schema in
+individual JSON files against JSON data in directory `test/`.
