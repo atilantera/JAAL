@@ -47,3 +47,8 @@ data in directory `test/`.
 
 `./build.sh` uses *json-schema-ref-parser* to combine individual JAAL JSON
 Schema files into a single file `bundle/jaal-bundle.json`.
+
+## Running tests
+
+Do the bundling first. Then `./test.sh` tests the JAAL JSON Schema in
+individual JSON files against JSON data in directory `test/`.
