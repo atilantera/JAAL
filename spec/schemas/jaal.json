@@ -5,7 +5,7 @@
   "description": "JSON-based algorithm animation language",
   "type": "object",
   "properties": {
-    "metadata": { "$ref": "https://jaal.fi/schemas/metadata" },
+    "metadata": { "$ref": "/schemas/metadata" },
     "definitions": {
       "description": "Definitions: style and model answer",
       "type": "object"

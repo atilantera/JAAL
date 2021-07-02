@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jaal.fi/schemas/metadata",
+  "$id": "https://jaal.fi/schemas/node",
   "title": "JAAL 1.1 node",
   "description": "A graph node in a JAAL recording. It is used to represent both nodes of rooted trees and generic graphs.",
   "type": "object",
@@ -22,7 +22,7 @@
     },
     "style": {
       "description": "Graphical style of the node. TODO: ref to a Style schema",
-      "type": "string"
+      "$ref": "/schemas/style"
     },
     "attr": {
       "description": "A generic attribute of the node. TODO: ref to a Generic Attribute schema",

@@ -23,7 +23,6 @@
       "$ref": "#/definitions/hexcolor"
     }
   },
-  "required": ["name"],
   "definitions": {
     "hexcolor": {
       "description": "RGB color triplet:  #rrggbb, where each rr, gg, and bb are red-green-blue values in the range 0..255 in hexadecimal.",

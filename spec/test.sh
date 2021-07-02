@@ -13,8 +13,8 @@ ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/valid/metadata*" --valid
 
-ajv test --spec=draft2020 -s schemas/node.json -r schemas/attributeList.json \
-  -d "test/valid/node*.json" --valid
+ajv test --spec=draft2020 -s schemas/node.json \
+-r "schemas/{attributeList,style}.json" -d "test/valid/node*.json" --valid
 
 echo "--- Invalid schemas -----------------------------"
 
@@ -26,8 +26,8 @@ ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/invalid/metadata*" --invalid --errors=text
 
-ajv test --spec=draft2020 -s schemas/node.json -r schemas/attributeList.json \
-  -d "test/invalid/node*.json" --invalid --errors=text
+ajv test --spec=draft2020 -s schemas/node.json \
+-r "schemas/{attributeList,style}.json" -d "test/invalid/node*.json" --invalid
 
 
 # Bundle
