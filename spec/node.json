@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jaal.fi/schemas/metadata",
+  "title": "JAAL 1.1 node",
+  "description": "A graph node in a JAAL recording. It is used to represent both nodes of rooted trees and generic graphs.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "A unique identifier for the node among all data structures.",
+      "type": "string",
+      "pattern": "^node\\([0-9]{3}\\+$"
+    },
+    "key": {
+      "description": "Reference to a data structure inside the node.",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "TODO: ref to a Generic Data Structure schema" }
+      ]
+    },
+    "legend": {
+      "description": "A text to be displayed aside the node.",
+      "type": "string"
+    },
+    "style": {
+      "description": "Graphical style of the node.",
+      "type": "TODO: ref to a Style schema"
+    },
+    "attr": {
+      "description": "A generic attribute of the node.",
+      "type": "TODO: ref to a Generic Attribute schema"
+    }
+  },
+  "required": ["id", "key"]
+}
