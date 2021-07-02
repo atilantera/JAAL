@@ -1,0 +1,9 @@
+{
+  "id": "node1",
+  "key": "A",
+  "attr": {
+    "simpleAttribute": 1,
+    "secondAttribute": "hello",
+    "_FancyAttribute1": [ "very", "complex" ]
+  }
+}

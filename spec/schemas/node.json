@@ -13,8 +13,7 @@
     "key": {
       "description": "Reference to a data structure inside the node.",
       "oneOf": [
-        { "type": "string" },
-        { "type": "TODO: ref to a Generic Data Structure schema" }
+        { "type": "string" }
       ]
     },
     "legend": {
@@ -22,12 +21,12 @@
       "type": "string"
     },
     "style": {
-      "description": "Graphical style of the node.",
-      "type": "TODO: ref to a Style schema"
+      "description": "Graphical style of the node. TODO: ref to a Style schema",
+      "type": "string"
     },
     "attr": {
-      "description": "A generic attribute of the node.",
-      "type": "TODO: ref to a Generic Attribute schema"
+      "description": "A generic attribute of the node. TODO: ref to a Generic Attribute schema",
+      "$ref": "/schemas/attributeList"
     }
   },
   "required": ["id", "key"]
