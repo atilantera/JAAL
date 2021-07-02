@@ -6,4 +6,4 @@ async function bundle(mainSchema) {
   console.log(JSON.stringify(bundled));
 }
 
-bundle("jaal.json");
+bundle("schemas/jaal.json");

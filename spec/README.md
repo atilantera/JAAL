@@ -6,11 +6,10 @@ This directory contains the specification for JAAL as
 [JSON schema](https://json-schema.org).
 
 - bundle/jaal.json: The JSON Schema of JAAL in a single file (bundle)
+- schemas/ : The JSON schema of JAAL as separate modules
 - test/     : test data to validate against the schema
 - bundle.js: compiles *.json into bundle/jaal.json
-- *.json : The JSON schema of JAAL as separate modules
 - *.sh: convenience scripts
--
 - README.md : this file
 
 ## Software requirements

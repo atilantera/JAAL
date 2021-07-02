@@ -1,0 +1,5 @@
+{
+  "comment": "text-color lacks the # character",
+  "name": "testStyle",
+  "text-color": "a0b3451"
+}

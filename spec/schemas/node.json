@@ -8,7 +8,7 @@
     "id": {
       "description": "A unique identifier for the node among all data structures.",
       "type": "string",
-      "pattern": "^node\\([0-9]{3}\\+$"
+      "pattern": "^node[0-9]+$"
     },
     "key": {
       "description": "Reference to a data structure inside the node.",

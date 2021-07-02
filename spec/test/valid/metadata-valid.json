@@ -1,0 +1,10 @@
+{
+  "jaalVersion": "1.1",
+  "jaalGenerator": "manual",
+  "browser": "none",
+  "exercise": {
+    "name": "Metadata test",
+    "collection": "JAAL schema testdata",
+    "runningLocation": ""
+  }
+}
