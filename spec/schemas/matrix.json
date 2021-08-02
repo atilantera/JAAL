@@ -49,11 +49,11 @@
     },
     "style": {
       "description": "Graphical style of the matrix.",
-      "type": "string"
+      "$ref": "https://jaal.fi/schemas/style"
     },
     "attr": {
       "description": "Generic attributes of the matrix.",
-      "type": "string"
+      "$ref": "https://jaal.fi/schemas/attributeList"
     }
   },
   "required": ["id", "rows", "columns", "key"]

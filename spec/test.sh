@@ -28,6 +28,10 @@ ajv test --spec=draft2020 -s schemas/attributeList.json \
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
 -d "test/invalid/jaal*.json" --invalid --errors=text
 
+ajv test --spec=draft2020 -s schemas/matrix.json \
+ -r "schemas/{attributeList,node,style}.json" \
+ -d "test/invalid/matrix*.json" --invalid
+
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/invalid/metadata*" --invalid --errors=text
 
 ajv test --spec=draft2020 -s schemas/node.json \

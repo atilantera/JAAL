@@ -1,0 +1,37 @@
+{
+  "description": "A 2-dimensional array with all properties",
+  "id": "matrix1",
+  "rows": 2,
+  "columns": 3,
+  "key": [
+    [
+      { "id": "node1", "key": "A"},
+      { "id": "node2", "key": "B"},
+      {
+        "id": "node3",
+        "key": "C",
+        "style": {
+          "text-color": "#cc0000"
+        }
+      }
+    ],
+    [
+      { "id": "node4", "key": "D"},
+      { "id": "node5", "key": "E"},
+      { "id": "node6", "key": "F"}
+    ]
+  ],
+  "rowLabels": [ "α", "1 - α" ],
+  "columnLabels": [ "1", "2", "3" ],
+  "legend": "A fancy matrix",
+  "style": {
+    "text-color": "#ffcc00"
+  },
+  "attr": {
+    "verySpecificAttribute": {
+      "property1": 387.1,
+      "property2": 22.1
+    },
+    "secondAttribute": "sure"
+  }
+}
