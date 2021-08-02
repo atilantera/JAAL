@@ -1,0 +1,17 @@
+{
+  "description": "A vertical 1-dimensional array",
+  "id": "matrix1",
+  "rows": 3,
+  "columns": 1,
+  "key": [
+    [
+      { "id": "node1", "key": "A" }
+    ],
+    [
+      { "id": "node2", "key": "B" }
+    ],
+    [
+      { "id": "node3", "key": "C" }
+    ]
+  ]
+}

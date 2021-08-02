@@ -21,10 +21,10 @@
       "minimum": 1
     },
     "key": {
-      "description": "The contents of the array. This index is the row.",
+      "description": "List of rows in the array.",
       "type": "array",
       "items": {
-        "description": "The contents of the array. This index is the column.",
+        "description": "List of cells on a row.",
         "type": "array",
         "items": { "$ref": "https://jaal.fi/schemas/node" }
       }
@@ -32,12 +32,16 @@
     "rowLabels": {
       "description": "Label for each row to be displayed on the bottom of the matrix.",
       "type": "array",
-      "items": "string"
+      "items": {
+        "type": "string"
+      }
     },
     "columnLabels": {
       "description": "Label for each column to be displayed on the bottom of the matrix.",
       "type": "array",
-      "items": "string"
+      "items": {
+        "type": "string"
+      }
     },
     "legend": {
       "description": "A text to be displayed on the top of the matrix.",
@@ -45,12 +49,11 @@
     },
     "style": {
       "description": "Graphical style of the matrix.",
-      "type": "string",
-      "comment": "TODO: ref to a Style schema"
+      "type": "string"
     },
     "attr": {
       "description": "Generic attributes of the matrix.",
-      "type": { "$ref": "https://jaal.fi/schemas/attributeList" }
+      "type": "string"
     }
   },
   "required": ["id", "rows", "columns", "key"]

@@ -11,7 +11,11 @@ ajv test --spec=draft2020 -s schemas/attributeList.json \
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
   -d "test/valid/jaal*.json" --valid
 
-ajv test --spec=draft2020 -s schemas/metadata.json -d "test/valid/metadata*" --valid
+ajv test --spec=draft2020 -s schemas/matrix.json \
+ -r "schemas/{attributeList,node,style}.json" \
+ -d "test/valid/matrix*.json" --valid
+
+ajv test --spec=draft2020 -s schemas/metadata.json -d "test/valid/metadata*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/node.json \
 -r "schemas/{attributeList,style}.json" -d "test/valid/node*.json" --valid

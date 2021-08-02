@@ -1,0 +1,18 @@
+{
+  "description": "A 2-dimensional array",
+  "id": "matrix1",
+  "rows": 2,
+  "columns": 3,
+  "key": [
+    [
+      { "id": "node1", "key": "A"},
+      { "id": "node2", "key": "B"},
+      { "id": "node3", "key": "C"}
+    ],
+    [
+      { "id": "node4", "key": "D"},
+      { "id": "node5", "key": "E"},
+      { "id": "node6", "key": "F"}
+    ]
+  ]
+}
