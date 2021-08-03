@@ -1,0 +1,11 @@
+- data examples for graph
+  - linked list with payload
+    * payload is another node which is referenced by id in the linked list
+      node as property "value" (right?)
+  - binary tree without payload
+  - undirected graph
+  - undirected, weighted graph
+  etc...
+
+Eventually all JAAL should support all the data structures in Trak Y JSAV
+exercises.
