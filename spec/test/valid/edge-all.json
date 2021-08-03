@@ -1,0 +1,6 @@
+{
+  "id": "edge1",
+  "node": [ "node1", "node2" ],
+  "style": "simpleStyle",
+  "tag": "2"
+}
