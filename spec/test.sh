@@ -8,34 +8,45 @@ echo "--- Valid schemas -----------------------------"
 ajv test --spec=draft2020 -s schemas/attributeList.json \
   -d "test/valid/attributeList*.json" --valid
 
+ajv test --spec=draft2020 -s schemas/edge.json \
+  -r "schemas/attributeList.json" -d "test/valid/edge*.json" --valid
+
+ajv test --spec=draft2020 -s schemas/graph.json \
+  -r "schemas/{attributeList,edge,node}.json" -d "test/valid/graph*.json" --valid
+
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
   -d "test/valid/jaal*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/matrix.json \
- -r "schemas/{attributeList,node,style}.json" \
+ -r "schemas/{attributeList,node}.json" \
  -d "test/valid/matrix*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/valid/metadata*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/node.json \
--r "schemas/{attributeList,style}.json" -d "test/valid/node*.json" --valid
+-r "schemas/attributeList.json" -d "test/valid/node*.json" --valid
+
 
 echo "--- Invalid schemas -----------------------------"
 
 ajv test --spec=draft2020 -s schemas/attributeList.json \
 -d "test/invalid/attributeList*.json" --invalid --errors=text
 
+ajv test --spec=draft2020 -s schemas/edge.json \
+-r "schemas/attributeList.json" -d "test/invalid/edge*.json" --invalid
+
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
 -d "test/invalid/jaal*.json" --invalid --errors=text
 
 ajv test --spec=draft2020 -s schemas/matrix.json \
- -r "schemas/{attributeList,node,style}.json" \
+ -r "schemas/{attributeList,node}.json" \
  -d "test/invalid/matrix*.json" --invalid
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/invalid/metadata*" --invalid --errors=text
 
+
 ajv test --spec=draft2020 -s schemas/node.json \
--r "schemas/{attributeList,style}.json" -d "test/invalid/node*.json" --invalid
+-r "schemas/attributeList.json" -d "test/invalid/node*.json" --invalid
 
 
 # Bundle
