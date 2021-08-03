@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jaal.fi/schemas/matrix",
+  "$id": "https://jaal.fi/schemas/matrix.json",
   "title": "JAAL 1.1 matrix",
   "description": "A one- or two-dimensional array with fixed number of rows and columns.",
   "type": "object",
@@ -26,7 +26,7 @@
       "items": {
         "description": "List of cells on a row.",
         "type": "array",
-        "items": { "$ref": "https://jaal.fi/schemas/node" }
+        "items": { "$ref": "node.json" }
       }
     },
     "rowLabels": {
@@ -49,11 +49,11 @@
     },
     "style": {
       "description": "Graphical style of the matrix.",
-      "$ref": "https://jaal.fi/schemas/style"
+      "$ref": "style.json"
     },
     "attr": {
       "description": "Generic attributes of the matrix.",
-      "$ref": "https://jaal.fi/schemas/attributeList"
+      "$ref": "attributeList.json"
     }
   },
   "required": ["id", "rows", "columns", "key"]

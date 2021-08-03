@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jaal.fi/schemas/style",
+  "$id": "https://jaal.fi/schemas/style.json",
   "title": "JAAL 1.1 node",
   "description": "A style definition in a JAAL recording.",
   "type": "object",

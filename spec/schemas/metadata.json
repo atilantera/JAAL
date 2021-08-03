@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jaal.fi/schemas/metadata",
+  "$id": "https://jaal.fi/schemas/metadata.json",
   "title": "JAAL 1.1 metadata",
   "description": "Metadata about a JAAL recording",
   "type": "object",
