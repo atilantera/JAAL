@@ -21,11 +21,11 @@
       "type": "string"
     },
     "style": {
-      "description": "Graphical style of the node. TODO: ref to a Style schema",
-      "$ref": "style.json"
+      "description": "Graphical style of the node: a name of a style definition.",
+      "type": "string"
     },
     "attr": {
-      "description": "A generic attribute of the node. TODO: ref to a Generic Attribute schema",
+      "description": "A generic attribute of the node.",
       "$ref": "attributeList.json"
     }
   },

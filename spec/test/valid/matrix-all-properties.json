@@ -10,9 +10,7 @@
       {
         "id": "node3",
         "key": "C",
-        "style": {
-          "text-color": "#cc0000"
-        }
+        "style": "simpleStyle"
       }
     ],
     [
@@ -24,9 +22,7 @@
   "rowLabels": [ "α", "1 - α" ],
   "columnLabels": [ "1", "2", "3" ],
   "legend": "A fancy matrix",
-  "style": {
-    "text-color": "#ffcc00"
-  },
+  "style": "simpleStyle",
   "attr": {
     "verySpecificAttribute": {
       "property1": 387.1,

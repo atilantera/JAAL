@@ -26,7 +26,9 @@
       "items": {
         "description": "List of cells on a row.",
         "type": "array",
-        "items": { "$ref": "node.json" }
+        "items": {
+          "$ref": "node.json"
+        }
       }
     },
     "rowLabels": {
@@ -48,8 +50,8 @@
       "type": "string"
     },
     "style": {
-      "description": "Graphical style of the matrix.",
-      "$ref": "style.json"
+      "description": "Graphical style of the node: a name of a style definition.",
+      "type": "string"
     },
     "attr": {
       "description": "Generic attributes of the matrix.",
