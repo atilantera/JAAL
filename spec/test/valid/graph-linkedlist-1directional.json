@@ -1,0 +1,56 @@
+{
+  "description": "A simple one-directed linked list with head and tail nodes, no payload.",
+  "id": "graph1",
+  "node": [
+    {
+      "id": "node0",
+      "key": "head"
+    },
+    {
+      "id": "node1",
+      "key": "A"
+    },
+    {
+      "id": "node2",
+      "key": "B"
+    },
+    {
+      "id": "node3",
+      "key": "C"
+    },
+    {
+      "id": "node4",
+      "key": "tail"
+    }
+  ],
+  "edge": [
+    {
+      "id": "edge0",
+      "node": [ "node0", "node1" ],
+      "tailElem": "next"
+    },
+    {
+      "id": "edge1",
+      "node": [ "node1", "node2" ],
+      "tailElem": "next"
+    },
+    {
+      "id": "edge2",
+      "node": [ "node2", "node3" ],
+      "tailElem": "next"
+    },
+    {
+      "id": "edge3",
+      "node": [ "node3", "node4" ],
+      "tailElem": "next"
+    },
+    {
+      "id": "edge4",
+      "node": [ "node4", "node4" ],
+      "tailElem": "next"
+    }
+  ],
+  "directed": true,
+  "dsClass": "list",
+  "dsSubClass": "linkedlist-onedirectional"
+}

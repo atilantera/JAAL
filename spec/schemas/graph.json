@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jaal.fi/schemas/matrix.json",
+  "$id": "https://jaal.fi/schemas/graph.json",
   "title": "JAAL 1.1 graph",
   "description": "A graph data structure for representing lists, trees, and graphs.",
   "type": "object",

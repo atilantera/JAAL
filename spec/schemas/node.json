@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jaal.fi/schemas/node.json",
   "title": "JAAL 1.1 node",
-  "description": "A graph node in a JAAL recording. It is used to represent both nodes of rooted trees and generic graphs.",
+  "description": "Generic data structure for an array cell, a list node, a tree node, and a graph node.",
   "type": "object",
   "properties": {
     "id": {
@@ -11,9 +11,16 @@
       "pattern": "^node[0-9]+$"
     },
     "key": {
-      "description": "Reference to a data structure inside the node.",
+      "description": "Primary data inside the node. This may be a reference to a graph, matrix, or node.",
+      "type": "string"
+    },
+    "value": {
+      "description": "Secondary data inside the node. This may be a reference to a graph, matrix, or node.",
       "oneOf": [
-        { "type": "string" }
+        { "type": "string" },
+        { "$ref": "graph.json" },
+        { "$ref": "matrix.json" },
+        { "$ref": "node.json" }
       ]
     },
     "legend": {
