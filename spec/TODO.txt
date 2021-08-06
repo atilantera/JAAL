@@ -2,10 +2,14 @@
   - linked list with payload
     * payload is another node which is referenced by id in the linked list
       node as property "value" (right?)
-  - binary tree without payload
-  - undirected graph
+    - undirected graph
   - undirected, weighted graph
-  etc...
+  - Finger tree
+  - kd tree
+
+- whole JAAL recordings
+  - insertion sort
+  - Dijkstra's algorithm
 
 Eventually all JAAL should support all the data structures in Trak Y JSAV
 exercises.

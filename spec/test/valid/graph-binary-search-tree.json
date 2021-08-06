@@ -1,0 +1,36 @@
+{
+  "description": "A binary search tree with string-string keys-value pairs.",
+  "id": "graph1",
+  "node": [
+    {
+      "id": "node0",
+      "key": "B",
+      "value": "10"
+    },
+    {
+      "id": "node1",
+      "key": "A",
+      "value": "20"
+    },
+    {
+      "id": "node2",
+      "key": "C",
+      "value": "15"
+    }
+  ],
+  "edge": [
+    {
+      "id": "edge0",
+      "node": [ "node0", "node1" ],
+      "tailElem": "left"
+    },
+    {
+      "id": "edge1",
+      "node": [ "node0", "node2" ],
+      "tailElem": "right"
+    }
+  ],
+  "directed": true,
+  "dsClass": "list",
+  "dsSubClass": "linkedlist-bidirectional"
+}
