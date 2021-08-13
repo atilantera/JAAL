@@ -1,0 +1,158 @@
+{
+  "description": "A red-black tree with 25 nodes.",
+  "id": "graph1",
+  "node": [
+    { "id": "node00", "key": "80", "style": "black" },
+    { "id": "node01", "key": "60", "style": "red" },
+    { "id": "node02", "key": "97", "style": "black" },
+    { "id": "node03", "key": "36", "style": "black" },
+    { "id": "node04", "key": "71", "style": "black" },
+    { "id": "node05", "key": "87", "style": "black" },
+    { "id": "node06", "key": "98", "style": "black" },
+    { "id": "node07", "key": "16", "style": "red" },
+    { "id": "node08", "key": "46", "style": "red" },
+    { "id": "node09", "key": "62", "style": "red" },
+    { "id": "node10", "key": "73", "style": "black" },
+    { "id": "node11", "key": "81", "style": "red" },
+    { "id": "node12", "key": "95", "style": "red" },
+    { "id": "node13", "key": "10", "style": "black" },
+    { "id": "node14", "key": "35", "style": "black" },
+    { "id": "node15", "key": "43", "style": "black" },
+    { "id": "node16", "key": "47", "style": "black" },
+    { "id": "node17", "key": "61", "style": "black" },
+    { "id": "node18", "key": "67", "style": "black" },
+    { "id": "node19", "key": "72", "style": "red" },
+    { "id": "node20", "key": "77", "style": "red" },
+    { "id": "node21", "key": "11", "style": "red" },
+    { "id": "node22", "key": "23", "style": "red" },
+    { "id": "node23", "key": "41", "style": "red" },
+    { "id": "node24", "key": "69", "style": "red" }
+  ],
+  "edge": [
+    {
+      "id": "edge00-01",
+      "node": [ "node00", "node01" ],
+      "relation": "left",
+      "description": "node01 is the left child of node00."
+    },
+    {
+      "id": "edge00-02",
+      "node": [ "node00", "node02" ],
+      "relation": "right",
+      "description": "node02 is the left child of node00."
+    },
+    {
+      "id": "edge01-03",
+      "node": [ "node01", "node03" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge01-04",
+      "node": [ "node01", "node04" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge02-05",
+      "node": [ "node02", "node05" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge02-06",
+      "node": [ "node02", "node06" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge03-07",
+      "node": [ "node03", "node07" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge03-08",
+      "node": [ "node03", "node08" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge04-09",
+      "node": [ "node04", "node09" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge04-10",
+      "node": [ "node04", "node10" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge05-11",
+      "node": [ "node05", "node11" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge05-12",
+      "node": [ "node05", "node12" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge07-13",
+      "node": [ "node07", "node13" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge07-14",
+      "node": [ "node07", "node13" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge08-15",
+      "node": [ "node08", "node15" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge08-16",
+      "node": [ "node08", "node16" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge09-17",
+      "node": [ "node09", "node17" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge09-18",
+      "node": [ "node09", "node18" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge10-19",
+      "node": [ "node10", "node19" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge10-20",
+      "node": [ "node10", "node20" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge13-21",
+      "node": [ "node13", "node21" ],
+      "relation": "right"
+    },
+    {
+      "id": "edge14-22",
+      "node": [ "node14", "node22" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge15-23",
+      "node": [ "node15", "node23" ],
+      "relation": "left"
+    },
+    {
+      "id": "edge18-24",
+      "node": [ "node18", "node24" ],
+      "relation": "right"
+    }
+  ],
+  "directed": true,
+  "dsClass": "graph",
+  "dsSubClass": "weighted"
+}
