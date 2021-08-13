@@ -1,0 +1,116 @@
+{
+  "description": "An undirected, weighted graph.",
+  "id": "graph1",
+  "node": [
+    { "id": "nodeA", "key": "A" },
+    { "id": "nodeB", "key": "B" },
+    { "id": "nodeC", "key": "C" },
+    { "id": "nodeD", "key": "D" },
+    { "id": "nodeE", "key": "E" },
+    { "id": "nodeF", "key": "F" },
+    { "id": "nodeG", "key": "G" },
+    { "id": "nodeH", "key": "H" },
+    { "id": "nodeI", "key": "I" },
+    { "id": "nodeJ", "key": "J" },
+    { "id": "nodeK", "key": "K" },
+    { "id": "nodeL", "key": "L" },
+    { "id": "nodeM", "key": "M" },
+    { "id": "nodeN", "key": "N" },
+    { "id": "nodeO", "key": "O" }
+  ],
+  "edge": [
+    {
+      "id": "edgeAB",
+      "node": [ "nodeA", "nodeB" ],
+      "tag": "2"
+    },
+    {
+      "id": "edgeAE",
+      "node": [ "nodeA", "nodeE" ],
+      "tag": "2"
+    },
+    {
+      "id": "edgeBC",
+      "node": [ "nodeB", "nodeC" ],
+      "tag": "5"
+    },
+    {
+      "id": "edgeBF",
+      "node": [ "nodeB", "nodeF" ],
+      "tag": "8"
+    },
+    {
+      "id": "edgeCD",
+      "node": [ "nodeC", "nodeD" ],
+      "tag": "9"
+    },
+    {
+      "id": "edgeEF",
+      "node": [ "nodeE", "nodeF" ],
+      "tag": "1"
+    },
+    {
+      "id": "edgeEI",
+      "node": [ "nodeE", "nodeI" ],
+      "tag": "5"
+    },
+    {
+      "id": "edgeEJ",
+      "node": [ "nodeE", "nodeJ" ],
+      "tag": "5"
+    },
+    {
+      "id": "edgeFJ",
+      "node": [ "nodeF", "nodeJ" ],
+      "tag": "5"
+    },
+    {
+      "id": "edgeGH",
+      "node": [ "nodeG", "nodeH" ],
+      "tag": "3"
+    },
+    {
+      "id": "edgeHL",
+      "node": [ "nodeH", "nodeL" ],
+      "tag": "9"
+    },
+    {
+      "id": "edgeHL",
+      "node": [ "nodeH", "nodeL" ],
+      "tag": "9"
+    },
+    {
+      "id": "edgeIM",
+      "node": [ "nodeI", "nodeM" ],
+      "tag": "7"
+    },
+    {
+      "id": "edgeJK",
+      "node": [ "nodeJ", "nodeK" ],
+      "tag": "2"
+    },
+    {
+      "id": "edgeJM",
+      "node": [ "nodeJ", "nodeM" ],
+      "tag": "5"
+    },
+    {
+      "id": "edgeJN",
+      "node": [ "nodeJ", "nodeN" ],
+      "tag": "7"
+    },
+    {
+      "id": "edgeKO",
+      "node": [ "nodeK", "nodeO" ],
+      "tag": "6"
+    },
+    {
+      "id": "edgeMN",
+      "node": [ "nodeM", "nodeN" ],
+      "tag": "2"
+    }
+  ],
+  "directed": true,
+  "dsClass": "graph",
+  "dsSubClass": "weighted"
+}
