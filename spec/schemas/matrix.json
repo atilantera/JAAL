@@ -8,7 +8,7 @@
     "id": {
       "description": "A unique identifier for the matrix among all data structures.",
       "type": "string",
-      "pattern": "^matrix[0-9]+$"
+      "pattern": "^matrix"
     },
     "rows": {
       "description": "Number of rows in the matrix.",

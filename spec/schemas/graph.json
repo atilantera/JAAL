@@ -8,7 +8,7 @@
     "id": {
       "description": "A unique identifier for the graph among all data structures.",
       "type": "string",
-      "pattern": "^graph[0-9]+$"
+      "pattern": "^graph"
     },
     "node": {
       "description": "List of nodes in the graph.",

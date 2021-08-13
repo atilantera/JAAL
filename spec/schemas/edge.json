@@ -8,7 +8,7 @@
     "id": {
       "description": "A unique identifier for the node among all data structures.",
       "type": "string",
-      "pattern": "^edge[0-9]+$"
+      "pattern": "^edge"
     },
     "node": {
       "description": "A graph edge. If the graph is directed, the first node is the source and the second node is the target.",
@@ -17,7 +17,7 @@
       "maxItems": 2,
       "items": {
         "type": "string",
-        "pattern": "^node[0-9]+$"
+        "pattern": "^node"
       }
     },
     "style": {
