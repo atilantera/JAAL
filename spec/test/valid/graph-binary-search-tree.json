@@ -22,12 +22,12 @@
     {
       "id": "edge0",
       "node": [ "node0", "node1" ],
-      "tailElem": "left"
+      "relation": "left"
     },
     {
       "id": "edge1",
       "node": [ "node0", "node2" ],
-      "tailElem": "right"
+      "relation": "right"
     }
   ],
   "directed": true,

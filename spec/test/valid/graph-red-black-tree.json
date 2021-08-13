@@ -153,6 +153,7 @@
     }
   ],
   "directed": true,
-  "dsClass": "graph",
-  "dsSubClass": "weighted"
+  "dsClass": "tree",
+  "dsSubClass": "redblack",
+  "root": "node00"
 }
