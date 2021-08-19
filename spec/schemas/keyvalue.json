@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jaal.fi/schemas/key.json",
+  "$id": "https://jaal.fi/schemas/keyvalue.json",
   "title": "JAAL 1.1 key-value pair",
   "description": "A key which points to a value.",
   "type": "object",
@@ -29,5 +29,6 @@
       ]
     }
   },
-  "required": ["id", "key"]
+  "required": ["id", "key", "value"],
+  "additionalProperties": false
 }

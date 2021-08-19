@@ -12,19 +12,23 @@ ajv test --spec=draft2020 -s schemas/edge.json \
   -r "schemas/attributeList.json" -d "test/valid/edge*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/graph.json \
-  -r "schemas/{attributeList,edge,matrix,node}.json" -d "test/valid/graph*.json" --valid
+  -r "schemas/{attributeList,edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
   -d "test/valid/jaal*.json" --valid
 
+ajv test --spec=draft2020 -s schemas/keyvalue.json \
+-r "schemas/{attributeList,edge,graph,matrix,node}.json" \
+-d "test/valid/keyvalue*.json" --valid
+
 ajv test --spec=draft2020 -s schemas/matrix.json \
- -r "schemas/{attributeList,edge,graph,node}.json" \
+ -r "schemas/{attributeList,edge,keyvalue,graph,node}.json" \
  -d "test/valid/matrix*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/valid/metadata*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/node.json \
--r "schemas/{attributeList,edge,graph,matrix}.json" -d "test/valid/node*.json" --valid
+-r "schemas/{attributeList,edge,graph,keyvalue,matrix}.json" -d "test/valid/node*.json" --valid
 
 
 echo "--- Invalid schemas -----------------------------"
