@@ -1,0 +1,16 @@
+{
+  "id": "key1",
+  "key": "A",
+  "value": {
+    "id": "matrix1",
+    "rows": 1,
+    "columns": 3,
+    "key": [
+      [
+        { "id": "node1", "key": "A" },
+        { "id": "node2", "key": "B" },
+        { "id": "node3", "key": "C" }
+      ]
+    ]
+  }
+}
