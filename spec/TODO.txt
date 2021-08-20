@@ -20,3 +20,7 @@
 
 Eventually all JAAL should support all the data structures in Trak Y JSAV
 exercises.
+
+doc/jaal-schema-documentation.md: why [array of] key-value pairs is more
+generalizable than separate arrays of keys and values? B-tree, vp-tree, kd-tree,
+finger tree?

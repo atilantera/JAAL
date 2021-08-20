@@ -43,13 +43,13 @@ ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
 -d "test/invalid/jaal*.json" --invalid --errors=text
 
 ajv test --spec=draft2020 -s schemas/matrix.json \
- -r "schemas/{attributeList,edge,graph,node}.json" \
+ -r "schemas/{attributeList,edge,graph,keyvalue,node}.json" \
  -d "test/invalid/matrix*.json" --invalid
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/invalid/metadata*" --invalid --errors=text
 
 ajv test --spec=draft2020 -s schemas/node.json \
--r "schemas/{attributeList,edge,graph,matrix}.json" -d "test/invalid/node*.json" --invalid
+-r "schemas/{attributeList,edge,graph,keyvalue,matrix}.json" -d "test/invalid/node*.json" --invalid
 
 
 # Bundle

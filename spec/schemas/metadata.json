@@ -6,15 +6,15 @@
   "type": "object",
   "properties": {
     "jaalVersion": {
-      "description": "JAAL language version",
+      "description": "Text 'JAAL' with a language version number",
       "type": "string"
     },
     "jaalGenerator": {
-      "description": "JAAL data generator software",
+      "description": "JAAL data generator software name and version",
       "type": "string"
     },
     "browser": {
-      "description": "Web browser name and version",
+      "description": "Name and version of the web browser which is running JAAL data generator software",
       "type": "string"
     },
     "exercise": {
@@ -26,7 +26,7 @@
           "type": "string"
         },
         "collection": {
-          "description": "Name of the exercise collection",
+          "description": "Name of the exercise collection (e.g. the name of an electronic textbook)",
           "type": "string"
         },
         "runningLocation": {

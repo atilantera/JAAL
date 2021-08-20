@@ -11,7 +11,7 @@
       "pattern": "^edge"
     },
     "node": {
-      "description": "A graph edge. If the graph is directed, the first node is the source and the second node is the target.",
+      "description": "A graph edge is defined by two nodes. If the graph is directed, the first node is the source and the second node is the target.",
       "type": "array",
       "minItems": 2,
       "maxItems": 2,
