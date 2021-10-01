@@ -29,6 +29,5 @@
       ]
     }
   },
-  "required": ["id", "key", "value"],
-  "additionalProperties": false
+  "required": ["id", "key", "value"]
 }

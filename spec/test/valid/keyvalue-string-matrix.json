@@ -1,5 +1,17 @@
 {
-  "id": "key",
+  "description": "A key-value pair where the key is a string and the value is a matrix.",
+  "id": "key1",
   "key": "A",
-  "value": "10"
+  "value": {
+    "id": "matrix1",
+    "rows": 1,
+    "columns": 3,
+    "key": [
+      [
+        { "id": "node1", "key": "A" },
+        { "id": "node2", "key": "B" },
+        { "id": "node3", "key": "C" }
+      ]
+    ]
+  }
 }
