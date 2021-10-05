@@ -26,12 +26,26 @@ Most schemas have an "id" field (a string). It has two purposes:
    - The animation or model answer contains an operation which modifies an
     existing data structure.
 
+## animation.json
+
+Student's solution for the exercise.
+
+Properties:
+
+- simulationStart: A timestamp: when the exercise is loaded and the JAAL
+  recorder begins recording. The timestamp is in the ISO 8601 format:
+  `YYYY-MM-DDTHH:mm:ss.sssZ`, for example, 2021-10-05T12:57:22.831Z
+  meaning "5th October 2021 12:57 hours + 22.831 seconds, in the UTC time zone".
+  This timestamp shows when the student has begun working on the exercise.
+  For research purposes, it might be useful to have the timestamp inside the
+  JAAL recording instead of retrieving the exercise submission time from the
+  learning management system storing JAAL recordings.
 
 ## edge.json
 
 A graph edge in a JAAL recording.
 
-Properties
+Properties:
 
 - node: A graph edge is defined by two nodes. If the graph is directed, the'
   first node is the source and the second node is the target.
@@ -59,7 +73,9 @@ An event in a JAAL recording: either user's action or an step in model answer.
 Properties:
 - type: The type of the event.
   - `click` is a click of a data structure or an user interface widget in the
-    simulation.
+    simulation. The click events have a timestamp: integer value depicting
+    *milliseconds* from the time-date when the exercise is loaded. This is most
+    convenient for data analysis.
   - `undo` is the click of the Undo button. This is a separate event type
     to easily support finding difficult parts of the exercise where the user
     has clicked the Undo button.
