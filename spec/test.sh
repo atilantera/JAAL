@@ -8,6 +8,9 @@ echo "--- Valid schemas -----------------------------"
 ajv test --spec=draft2020 -s schemas/edge.json \
   -d "test/valid/edge*.json" --valid
 
+ajv test --spec=draft2020 -s schemas/event.json \
+  -d "test/valid/event*.json" --valid
+
 ajv test --spec=draft2020 -s schemas/graph.json \
   -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
 
@@ -29,6 +32,9 @@ ajv test --spec=draft2020 -s schemas/node.json \
 
 
 echo "--- Invalid schemas -----------------------------"
+
+ajv test --spec=draft2020 -s schemas/event.json \
+  -d "test/invalid/event*.json" --invalid
 
 ajv test --spec=draft2020 -s schemas/edge.json \
  -d "test/invalid/edge*.json" --invalid
