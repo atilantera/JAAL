@@ -6,19 +6,28 @@
   "type": "object",
   "properties": {
     "type": {
-      "description": "Type of the event.",
+      "description": "The type of the event",
       "type": "string",
-      "pattern": "^click$"
-    },
-    "object": {
-      "description": "Reference to a JAAL data structure.",
-      "type": "string",
-      "pattern": "^edge|graph|keyvalue|matrix|node"
+      "pattern": "^click|grade|undo$"
     },
     "time": {
       "description": "A time in milliseconds from the start of the simulation.",
-      "type": "integer"
+      "type": "integer",
+      "minimum": 0
+    },
+    "object": {
+      "description": "Reference to a JAAL data structure or the Undo button.",
+      "type": "string",
+      "pattern": "^edge|graph|keyvalue|matrix|node"
     }
   },
-  "required": ["object", "time", "type"]
+  "if": {
+    "properties": { "type": { "const": "click" } }
+  },
+  "then": {
+    "required": ["object", "time", "type"]
+  },
+  "else": {
+    "required": ["time", "type"]
+  }
 }

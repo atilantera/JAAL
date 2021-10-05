@@ -52,6 +52,19 @@ Properties
   for annotations where an edge depicts a relation that has designated roles
   for both ends of the relation.
 
+## event.json
+
+An event in a JAAL recording: either user's action or an step in model answer.
+
+Properties:
+- type: The type of the event.
+  - `click` is a click of a data structure or an user interface widget in the
+    simulation.
+  - `undo` is the click of the Undo button. This is a separate event type
+    to easily support finding difficult parts of the exercise where the user
+    has clicked the Undo button.
+  - `grade` is the click of the Grade button.
+
 ## graph.json
 
 A graph data structure for representing lists, trees, and graphs.
