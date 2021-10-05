@@ -1,0 +1,9 @@
+{
+  "description": "A node which contains a key-value pair (string-string).",
+  "id": "node1",
+  "key": {
+    "id": "keyvalue1",
+    "key": "A",
+    "value": "10"
+  }
+}

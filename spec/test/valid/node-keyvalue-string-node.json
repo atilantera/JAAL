@@ -1,0 +1,12 @@
+{
+  "description": "A node which contains a key-value pair (string-node). That is, there is node1 which has key-value pair: a string key 'A' maps to a value which is another node with string key 'B'.",
+  "id": "node1",
+  "key": {
+    "id": "keyvalue1",
+    "key": "A",
+    "value": {
+      "id": "node2",
+      "key": "B"
+    }
+  }
+}

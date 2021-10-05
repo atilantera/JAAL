@@ -1,0 +1,16 @@
+{
+  "description": "A node which contains an array of key-value pairs (string-string).",
+  "id": "node1",
+  "key": [
+    {
+      "id": "keyvalue1",
+      "key": "A",
+      "value": "10"
+    },
+    {
+      "id": "keyvalue2",
+      "key": "B",
+      "value": "15"
+    }        
+  ]
+}
