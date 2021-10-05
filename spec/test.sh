@@ -11,6 +11,9 @@ ajv test --spec=draft2020 -s schemas/edge.json \
 ajv test --spec=draft2020 -s schemas/event.json \
   -d "test/valid/event*.json" --valid
 
+ajv test --spec=draft2020 -s schemas/definitions.json \
+  -r "schemas/{event,style}.json" -d "test/valid/definitions*.json" --valid
+
 ajv test --spec=draft2020 -s schemas/graph.json \
   -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
 

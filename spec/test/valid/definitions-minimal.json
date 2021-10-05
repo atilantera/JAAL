@@ -1,0 +1,25 @@
+{
+  "description": "A minimal Definitions schema.",
+  "styles": [
+    {
+      "name": "testStyle",
+      "text-color": "#a0b12c"
+    }
+  ],
+  "score": {
+    "modelSteps": 11,
+    "studentSteps": 15,
+    "correctSteps": 5,
+    "undoSteps": 2
+  },
+  "modelAnswer": [
+    {
+      "type": "operation",
+      "time": 0
+    },
+    {
+      "type": "narration",
+      "time": 1
+    }
+  ]
+}

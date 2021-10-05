@@ -41,6 +41,33 @@ Properties:
   JAAL recording instead of retrieving the exercise submission time from the
   learning management system storing JAAL recordings.
 
+## definitions.json
+
+Other initial data than the initial data structures.
+
+Properties:
+
+- styles: Array of style definitions. Here are the actual styles defined, and
+  it is preferred that the recording otherwise refers to the IDs of these
+  styles.
+
+- score: Grading data of the exercise.
+  - modelSteps: Number of steps in the model answer.
+  - studentSteps: This is the same than length of the array jaal.animation.
+  - correctSteps: Number of student's consecutive correct steps from the
+    beginning, counted by automatic grader of the exercise.
+  - undoCount: Number of Undo actions.
+
+  The computational model regarding these steps is the following:
+  - modelSteps are decided by the exercise.
+  - correctSteps are decided by the exercise. They are counted after the
+    student has clicked the Grade button.
+  - studentSteps increase every time the student does something, and it is
+    handled by the JAAL recorder.
+  - UndoCount increases every time the student clicks the Undo button.
+    It is handled by the JAAL recorder.
+
+
 ## edge.json
 
 A graph edge in a JAAL recording.
@@ -80,6 +107,9 @@ Properties:
     to easily support finding difficult parts of the exercise where the user
     has clicked the Undo button.
   - `grade` is the click of the Grade button.
+  - `operation` is a data structure operation. This is used at least in the
+     model answer.
+  - `narration` means that the narrative text in the model answer changes.
 
 ## graph.json
 

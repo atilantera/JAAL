@@ -8,7 +8,7 @@
     "type": {
       "description": "The type of the event",
       "type": "string",
-      "pattern": "^click|grade|undo$"
+      "pattern": "^click|grade|undo|operation|narration$"
     },
     "time": {
       "description": "A time in milliseconds from the start of the simulation.",
