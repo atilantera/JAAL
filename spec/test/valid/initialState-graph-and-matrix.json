@@ -1,0 +1,52 @@
+{
+  "description": "An example of two initial data structures together: a matrix and a graph.",
+  "dataStructures": [
+    {
+      "id": "matrix1",
+      "rows": 1,
+      "columns": 3,
+      "key": [
+        [
+          { "id": "node3", "key": "X" },
+          { "id": "node4", "key": "Y" },
+          { "id": "node5", "key": "Z" }
+        ]
+      ]
+    },
+    {
+      "id": "graph1",
+      "node": [
+        {
+          "id": "node0",
+          "key": "B",
+          "value": "10"
+        },
+        {
+          "id": "node1",
+          "key": "A",
+          "value": "20"
+        },
+        {
+          "id": "node2",
+          "key": "C",
+          "value": "15"
+        }
+      ],
+      "edge": [
+        {
+          "id": "edge0",
+          "node": [ "node0", "node1" ],
+          "relation": "left"
+        },
+        {
+          "id": "edge1",
+          "node": [ "node0", "node2" ],
+          "relation": "right"
+        }
+      ],
+      "directed": true,
+      "dsClass": "list",
+      "dsSubClass": "linkedlist-bidirectional"
+    }
+  ]
+}

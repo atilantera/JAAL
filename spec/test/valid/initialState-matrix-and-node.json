@@ -1,0 +1,23 @@
+{
+  "description": "A vertical array and a temp variable.",
+  "dataStructures": [
+    {
+      "id": "matrix1",
+      "rows": 1,
+      "columns": 3,
+      "key": [
+        [
+          { "id": "node3", "key": "X" },
+          { "id": "node4", "key": "Y" },
+          { "id": "node5", "key": "Z" }
+        ]
+      ]
+    },
+    {
+      "id": "node0",
+      "key": "10",
+      "legend": "temp",
+      "style": "variable"
+    }
+  ]
+}

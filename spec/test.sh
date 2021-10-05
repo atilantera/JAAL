@@ -17,6 +17,10 @@ ajv test --spec=draft2020 -s schemas/definitions.json \
 ajv test --spec=draft2020 -s schemas/graph.json \
   -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
 
+ajv test --spec=draft2020 -s schemas/initialState.json \
+  -r "schemas/{edge,keyvalue,graph,matrix,node}.json" \
+  -d "test/valid/initialState*.json" --valid
+
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
   -d "test/valid/jaal*.json" --valid
 

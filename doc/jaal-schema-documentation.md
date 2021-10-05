@@ -136,11 +136,22 @@ Some applications:
   - finite state machines
     (deterministic finite automata, Turing machine)
 
+## initialState.json
+
+Initial state for the exercise.
+
+Properties:
+- dataStructures: an array of data structures. Only Graph, Matrix and Node data
+  structures are allowed here. A single node is allowed in the initial state
+  to represent an already initialized variable which has important role in
+  the simulation, such as a temporary value for swaps in the Insertion sort
+  algorithm.
+
+
 ## jaal.json
 
-JSON-based algorithm animation language.
-
-This is the schema that defines the main structure of the language.
+JSON-based algorithm animation language. This is the the top-level schema which
+references to other schemas. It defines the main structure of the language.
 
 ## keyvalue.json
 
