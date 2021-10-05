@@ -39,6 +39,11 @@
       },
       "required": ["modelSteps", "studentSteps", "correctSteps", "undoSteps"]
     },
+    "simulationStart": {
+      "description": "A timestamp: when the exercise is loaded and the JAAL recorder begins recording. A time stamp in ISO 8601 format: YYYY-MM-DDTHH:mm:ss.sssZ",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}Z"
+    },
     "modelAnswer": {
       "description": "Steps of the model answer.",
       "type": "array",
@@ -47,5 +52,5 @@
       }
     }
   },
-  "required": ["styles", "score", "modelAnswer"]
+  "required": ["styles", "score", "modelAnswer", "simulationStart"]
 }

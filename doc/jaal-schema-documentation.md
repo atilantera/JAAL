@@ -28,18 +28,9 @@ Most schemas have an "id" field (a string). It has two purposes:
 
 ## animation.json
 
-Student's solution for the exercise.
+Student's solution steps for the exercise.
 
 Properties:
-
-- simulationStart: A timestamp: when the exercise is loaded and the JAAL
-  recorder begins recording. The timestamp is in the ISO 8601 format:
-  `YYYY-MM-DDTHH:mm:ss.sssZ`, for example, 2021-10-05T12:57:22.831Z
-  meaning "5th October 2021 12:57 hours + 22.831 seconds, in the UTC time zone".
-  This timestamp shows when the student has begun working on the exercise.
-  For research purposes, it might be useful to have the timestamp inside the
-  JAAL recording instead of retrieving the exercise submission time from the
-  learning management system storing JAAL recordings.
 
 ## definitions.json
 
@@ -67,6 +58,14 @@ Properties:
   - UndoCount increases every time the student clicks the Undo button.
     It is handled by the JAAL recorder.
 
+- simulationStart: A timestamp: when the exercise is loaded and the JAAL
+  recorder begins recording. The timestamp is in the ISO 8601 format:
+  `YYYY-MM-DDTHH:mm:ss.sssZ`, for example, 2021-10-05T12:57:22.831Z
+  meaning "5th October 2021 12:57 hours + 22.831 seconds, in the UTC time zone".
+  This timestamp shows when the student has begun working on the exercise.
+  For research purposes, it might be useful to have the timestamp inside the
+  JAAL recording instead of retrieving the exercise submission time from the
+  learning management system storing JAAL recordings.
 
 ## edge.json
 
