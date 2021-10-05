@@ -1,6 +1,6 @@
 {
   "description": "A key-value pair where the key is a string and the value is a matrix.",
-  "id": "key1",
+  "id": "keyvalue1",
   "key": "A",
   "value": {
     "id": "matrix1",
