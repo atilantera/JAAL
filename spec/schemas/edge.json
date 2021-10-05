@@ -35,10 +35,6 @@
     "headElem": {
       "description": "Data element at the head (end) node of the edge.",
       "type": "string"
-    },
-    "attr": {
-      "description": "A generic attribute of the node.",
-      "$ref": "attributeList.json"
     }
   },
   "required": ["id", "node"]

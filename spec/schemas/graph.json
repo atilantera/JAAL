@@ -49,10 +49,6 @@
     "style": {
       "description": "Graphical style of the node: a name of a style definition.",
       "type": "string"
-    },
-    "attr": {
-      "description": "Generic attributes of the graph.",
-      "$ref": "attributeList.json"
     }
   },
   "required": ["id", "node", "edge", "directed", "dsClass"]

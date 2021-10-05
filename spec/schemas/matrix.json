@@ -52,10 +52,6 @@
     "style": {
       "description": "Graphical style of the node: a name of a style definition.",
       "type": "string"
-    },
-    "attr": {
-      "description": "Generic attributes of the matrix.",
-      "$ref": "attributeList.json"
     }
   },
   "required": ["id", "rows", "columns", "key"]

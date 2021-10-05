@@ -5,51 +5,45 @@
 # ajv option -d: directory for test data
 echo "--- Valid schemas -----------------------------"
 
-ajv test --spec=draft2020 -s schemas/attributeList.json \
-  -d "test/valid/attributeList*.json" --valid
-
 ajv test --spec=draft2020 -s schemas/edge.json \
-  -r "schemas/attributeList.json" -d "test/valid/edge*.json" --valid
+  -d "test/valid/edge*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/graph.json \
-  -r "schemas/{attributeList,edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
+  -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
   -d "test/valid/jaal*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/keyvalue.json \
--r "schemas/{attributeList,edge,graph,matrix,node}.json" \
+-r "schemas/{edge,graph,matrix,node}.json" \
 -d "test/valid/keyvalue*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/matrix.json \
- -r "schemas/{attributeList,edge,keyvalue,graph,node}.json" \
+ -r "schemas/{edge,keyvalue,graph,node}.json" \
  -d "test/valid/matrix*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/valid/metadata*.json" --valid
 
 ajv test --spec=draft2020 -s schemas/node.json \
--r "schemas/{attributeList,edge,graph,keyvalue,matrix}.json" -d "test/valid/node*.json" --valid
+-r "schemas/{edge,graph,keyvalue,matrix}.json" -d "test/valid/node*.json" --valid
 
 
 echo "--- Invalid schemas -----------------------------"
 
-ajv test --spec=draft2020 -s schemas/attributeList.json \
--d "test/invalid/attributeList*.json" --invalid --errors=text
-
 ajv test --spec=draft2020 -s schemas/edge.json \
--r "schemas/attributeList.json" -d "test/invalid/edge*.json" --invalid
+ -d "test/invalid/edge*.json" --invalid
 
 ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
 -d "test/invalid/jaal*.json" --invalid --errors=text
 
 ajv test --spec=draft2020 -s schemas/matrix.json \
- -r "schemas/{attributeList,edge,graph,keyvalue,node}.json" \
+ -r "schemas/{edge,graph,keyvalue,node}.json" \
  -d "test/invalid/matrix*.json" --invalid
 
 ajv test --spec=draft2020 -s schemas/metadata.json -d "test/invalid/metadata*" --invalid --errors=text
 
 ajv test --spec=draft2020 -s schemas/node.json \
--r "schemas/{attributeList,edge,graph,keyvalue,matrix}.json" -d "test/invalid/node*.json" --invalid
+-r "schemas/{edge,graph,keyvalue,matrix}.json" -d "test/invalid/node*.json" --invalid
 
 
 # Bundle
