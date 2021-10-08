@@ -1,4 +1,5 @@
 {
+  "description": "Minimal JAAL test data.",
   "metadata": {
     "jaalVersion": "1.1",
     "jaalGenerator": "manual",
