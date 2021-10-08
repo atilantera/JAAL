@@ -1,4 +1,5 @@
 {
+  "description": "Invalid date format in simulationStart",
   "jaalVersion": "1.1",
   "jaalGenerator": "manual",
   "browser": "none",
@@ -7,5 +8,5 @@
     "collection": "JAAL schema testdata",
     "runningLocation": ""
   },
-  "simulationStart": "2021-10-05T12:57:22.831Z"
+  "simulationStart": "5.10.2021 12:57"
 }
