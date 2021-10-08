@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://jaal.fi/schemas/definitions.json",
+  "$id": "https://jaal.fi/schemas/initialState.json",
   "title": "JAAL 1.1 definitions",
   "description": "Initial state for the exercise",
   "type": "object",

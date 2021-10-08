@@ -9,7 +9,42 @@
       "runningLocation": ""
     }
   },
-  "definitions": {},
-  "initialState": {},
-  "animation": {}
+  "definitions": {
+    "description": "A minimal Definitions schema.",
+    "styles": [
+      {
+        "name": "testStyle",
+        "text-color": "#a0b12c"
+      }
+    ],
+    "score": {
+      "modelSteps": 11,
+      "studentSteps": 15,
+      "correctSteps": 5,
+      "undoSteps": 2
+    },
+    "modelAnswer": [
+      {
+        "type": "operation",
+        "time": 0
+      }
+    ]
+  },
+  "initialState": {
+    "description": "A vertical array and a temp variable.",
+    "dataStructures": [
+      {
+        "id": "node0",
+        "key": "10",
+        "legend": "temp",
+        "style": "variable"
+      }
+    ]
+  },
+  "animation": [
+    {
+      "type": "operation",
+      "time": 0
+    }
+  ]
 }

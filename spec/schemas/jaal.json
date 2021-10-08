@@ -5,18 +5,23 @@
   "description": "JSON-based algorithm animation language",
   "type": "object",
   "properties": {
-    "metadata": { "$ref": "metadata.json" },
+    "metadata": {
+      "$ref": "metadata.json"
+    },
     "definitions": {
       "description": "Definitions: style and model answer",
-      "type": "object"
+      "$ref": "definitions.json"
     },
     "initialState": {
       "description": "Initial state of data structures",
-      "type": "object"
+      "$ref": "initialState.json"
     },
     "animation": {
       "description": "Student's trace as algorithm animation",
-      "type": "object"
+      "type": "array",
+      "items": {
+        "$ref": "event.json"
+      }
     }
   },
   "required": [ "metadata", "definitions", "initialState", "animation" ]
