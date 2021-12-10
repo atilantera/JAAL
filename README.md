@@ -16,10 +16,7 @@ For a quick demonstration, see the working [JSAV Player Test Application](https:
 
 ### Literature
 
-Artturi Tilanterä, Giacomo Mariani, Ari Korhonen, and Otto Seppälä.
-Towards a JSON-based Algorithm Animation Language. In: [2021 IEEE Working
-Conference on Software Visualization (VISSOFT)](https://vissoft.info/2021/).
-IEEE, 2021. (Accepted)
+Artturi Tilanterä, Giacomo Mariani, Ari Korhonen, Otto Seppälä. [Towards a JSON-based Algorithm Animation Language](https://doi.org/10.1109/VISSOFT52517.2021.00026) In *2021 Working Conference on Software Visualization (VISSOFT)*. IEEE, 2021.
 
 ### Specification
 
