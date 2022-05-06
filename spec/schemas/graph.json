@@ -36,7 +36,7 @@
     "dsClass": {
       "description": "A keyword describing the main interpretation of the graph",
       "type": "string",
-      "pattern": "^(list)|(tree)|(graph)$"
+      "enum": ["list", "tree", "graph"]
     },
     "dsSubClass": {
       "description": "A free keyword descriping the detailed interpretation of the graph.",
