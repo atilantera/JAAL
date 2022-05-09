@@ -1,4 +1,5 @@
 {
+  "description": "Events cannot have a time which is a string.",
   "type": "click",
   "time": "2021-10-05T12:57:22.831Z",
   "object": "edge1"

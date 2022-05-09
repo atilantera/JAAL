@@ -1,3 +1,4 @@
 {
+  "description": "A JAAL recording with only Metadata present is invalid.",
   "metadata": {}
 }

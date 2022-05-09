@@ -1,5 +1,5 @@
 {
-  "description": "A horizontal 1-dimensional array",
+  "description": "The key field a Matrix must have a list inside a list even if the matrix was one-dimensional. Here is a horizontal 1-dimensional array represented in an invalid way. The correct way is in test/valid/matrix-1d-horizontal.json.",
   "id": "matrix1",
   "rows": 1,
   "columns": 3,

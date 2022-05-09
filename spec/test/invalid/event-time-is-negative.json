@@ -1,4 +1,5 @@
 {
+  "description": "Events cannot have negative time value.",
   "type": "click",
   "time": -2,
   "object": "edge1"

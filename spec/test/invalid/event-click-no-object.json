@@ -1,4 +1,5 @@
 {
+  "description": "An Event which has no type.",
   "type": "click",
   "time": 1500
 }

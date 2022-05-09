@@ -1,4 +1,5 @@
 {
+  "description": "An Event whose object reference has an invalid id value.",
   "type": "click",
   "time": 1500,
   "object": "multiedge1"

@@ -1,4 +1,5 @@
 {
+  "description": "An Event which has an invalid type.",
   "type": "an unknown event",
   "time": 1500,
   "object": "edge1"

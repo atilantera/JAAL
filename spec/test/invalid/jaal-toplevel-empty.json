@@ -1,4 +1,5 @@
 {
+  "description": "A JAAL recording which has all the four top level fields, but they are empty, and thus the data is invalid.",
   "metadata": {},
   "definitions": {},
   "initialState": {},

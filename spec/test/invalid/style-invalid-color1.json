@@ -1,5 +1,5 @@
 {
-  "comment": "text-color is too short",
+  "description": "A Style where the text-color is too short a string.",
   "name": "testStyle",
   "text-color": "#a0b34"
 }

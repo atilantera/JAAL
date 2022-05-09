@@ -1,4 +1,5 @@
 {
+  "description": "An Edge cannot have only one node.",
   "id": "edge1",
   "node": [ "node1" ]
 }
