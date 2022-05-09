@@ -1,4 +1,5 @@
 {
+  "description": "A Node with a reference to a Style.",
   "id": "node1",
   "key": "A",
   "style": "simpleStyle"

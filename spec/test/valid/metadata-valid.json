@@ -1,4 +1,5 @@
 {
+  "description": "A valid example of JAAL metadata",
   "jaalVersion": "1.1",
   "jaalGenerator": "manual",
   "browser": "none",

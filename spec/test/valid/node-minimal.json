@@ -1,4 +1,5 @@
 {
+  "description": "A minimal Node.",
   "id": "node1",
   "key": "A"
 }

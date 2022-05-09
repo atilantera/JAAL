@@ -1,4 +1,5 @@
 {
+  "description": "An example of a Style.",
   "name": "testStyle",
   "text-color": "#a0b12c"
 }
