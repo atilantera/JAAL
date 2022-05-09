@@ -1,4 +1,5 @@
 {
+  "description": "An Edge whose start and end node is the same.",
   "id": "edge1",
   "node": [ "node1", "node1" ]
 }

@@ -1,4 +1,5 @@
 {
+  "description": "A very minimal Edge.",
   "id": "edge1",
   "node": [ "node1", "node2" ]
 }
