@@ -1,0 +1,26 @@
+{
+  "name": "jaal",
+  "version": "1.1.0",
+  "description": "JSON-based Algorithm Animation Language",
+  "main": " ",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ajv": "^8.11.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aalto-LeTech/JAAL.git"
+  },
+  "author": "Artturi Tilanterä",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Aalto-LeTech/JAAL/issues"
+  },
+  "homepage": "https://github.com/Aalto-LeTech/JAAL#readme"
+}
