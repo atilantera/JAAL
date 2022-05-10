@@ -195,6 +195,16 @@ const valid_node_tests = () => {
 }
 
 
+const invalid_definitions_tests = () => {
+    /**
+     * Equivalent: 
+     * ajv test --spec=draft2020 -s schemas/definitions.json \
+     *    -r "schemas/{event,style}.json" -d "test/invalid/definitions*.json" --invalid
+     */
+    create_tests("definitions", "invalid", ["event", "style"]);
+}
+
+
 const invalid_edge_tests = () => {
     /**
      * ajv test --spec=draft2020 -s schemas/edge.json \
@@ -213,6 +223,24 @@ const invalid_event_tests = () => {
 }
 
 
+const invalid_graph_tests = () => {
+    /**
+     * Equivalent: 
+     * ajv test --spec=draft2020 -s schemas/graph.json \
+     *    -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/invalid/graph*.json" --invalid
+     */
+    create_tests("graph", "invalid", ["edge", "keyvalue", "matrix", "node"]);
+}
+
+const invalid_initialState_tests = () => {
+    /**
+     * ajv test --spec=draft2020 -s schemas/initialState.json \
+     *    -r "schemas/{edge,keyvalue,graph,matrix,node}.json" \
+     *    -d "test/invalid/initialState*.json" --invalid
+     */
+    create_tests("initialState", "invalid", ["edge", "keyvalue", "graph", "matrix", "node"]);
+}
+
 const invalid_jaal_tests = () => {
     /**
      * ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
@@ -220,6 +248,16 @@ const invalid_jaal_tests = () => {
      * NOTE: AJV wrong here, mathced with -r as in the valid JAAL tests. 
      */
     create_tests("jaal", "invalid", ["definitions", "edge", "event", "graph", "initialState", "keyvalue", "matrix", "metadata", "node", "style"]);
+}
+
+
+const invalid_keyvalue_tests = () => {
+    /**
+     * ajv test --spec=draft2020 -s schemas/keyvalue.json \
+     *  -r "schemas/{edge,graph,matrix,node}.json" \
+     *  -d "test/invalid/keyvalue*.json" --invalid
+     */
+    create_tests("keyvalue", "invalid", ["edge", "graph", "matrix", "node"]);
 }
 
 
@@ -269,9 +307,13 @@ function main() {
     valid_node_tests();
 
     console.log("--- Invalid schemas -----------------------------");
-    invalid_event_tests();
+    invalid_definitions_tests();
     invalid_edge_tests();
+    invalid_event_tests();
+    invalid_graph_tests();
+    invalid_initialState_tests();
     invalid_jaal_tests();
+    invalid_keyvalue_tests();
     invalid_matrix_tests();
     invalid_metadata_tests();
     invalid_node_tests();
