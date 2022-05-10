@@ -141,6 +141,11 @@ const valid_node_tests = () => {
 }
 
 
+const valid_style_tests = () => {
+    create_tests("style", "valid");
+}
+
+
 const invalid_definitions_tests = () => {
     create_tests("definitions", "invalid", ["event", "style"]);
 }
@@ -192,6 +197,11 @@ const invalid_node_tests = () => {
 }
 
 
+const invalid_style_tests = () => {
+    create_tests("style", "invalid");
+}
+
+
 function main() {
     console.log("--- Valid schemas -----------------------------");
     valid_edge_tests();
@@ -204,6 +214,7 @@ function main() {
     valid_matrix_tests();
     valid_metadata_tests();
     valid_node_tests();
+    valid_style_tests();
 
     console.log("--- Invalid schemas -----------------------------");
     invalid_definitions_tests();
@@ -216,6 +227,7 @@ function main() {
     invalid_matrix_tests();
     invalid_metadata_tests();
     invalid_node_tests();
+    invalid_style_tests();
     
 }
 
