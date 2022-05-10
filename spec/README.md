@@ -39,8 +39,7 @@ json-schema-ref-parser 9.0.9
 
 ## Running tests
 
-`./test.sh` tests the JAAL JSON Schema in individual JSON files against JSON
-data in directory `test/`.
+To run the unit tests: `node test.js`
 
 ## Bundling
 
