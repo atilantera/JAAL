@@ -1,12 +1,3 @@
-/**
-* Basic test case to evaluate test/valid/graph*.json cases. 
-* Command line version: 
-* ajv test --spec=draft2020 -s schemas/graph.json \
-*  -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
-* 
-* Set spec definition to 2020-draft.
-**/
-
 const Ajv2020 = require("ajv/dist/2020");
 const { assert } = require("console");
 const fs = require("fs");
@@ -27,7 +18,8 @@ const fs = require("fs");
 
 const create_tests = (schema_name, validity, dependencies) => {
     const schema = require("./schemas/"+schema_name+".json");
-    const files = fs.readdirSync("./test/" + validity).filter(fn => fn.startsWith(schema_name));
+    const files = fs.readdirSync("./test/" + validity)
+                    .filter(fn => fn.startsWith(schema_name));
     if (dependencies === undefined) {
         dependent_on = [];
     } else {
@@ -35,9 +27,9 @@ const create_tests = (schema_name, validity, dependencies) => {
     }
     for (var i = 0; i < files.length; i++) {
         if (validity === "valid") {
-            assert(validate_schema(schema, files[i], validity, dependent_on) == true);
+            assert(validate_schema(schema, files[i], validity, dependent_on));
         } else {
-            assert(validate_schema(schema, files[i], validity, dependent_on) == false);
+            assert(!validate_schema(schema, files[i], validity, dependent_on));
         }
         
     }
@@ -101,199 +93,106 @@ const validate_schema = (schema, test_file, validity, dependencies = []) => {
 
 
 const valid_edge_tests = () => {
-    /**
-     * Equivalent to: 
-     * ajv test --spec=draft2020 -s schemas/edge.json \
-     *    -d "test/valid/edge*.json" --valid
-     */
-
     create_tests("edge", "valid");
 };
 
 
 const valid_event_tests = () => {
-    /**
-     * Equivalent to
-     * ajv test --spec=draft2020 -s schemas/event.json \
-     *    -d "test/valid/event*.json" --valid
-     */
     create_tests("event", "valid"); 
 };
 
 
 const valid_definitions_tests = () => {
-    /**
-     * Equivalent: 
-     * ajv test --spec=draft2020 -s schemas/definitions.json \
-     *    -r "schemas/{event,style}.json" -d "test/valid/definitions*.json" --valid
-     */
     create_tests("definitions", "valid", ["event", "style"]);
 }
 
 const valid_graph_tests = () => {
-    /**
-     * Equivalent: 
-     * ajv test --spec=draft2020 -s schemas/graph.json \
-     *    -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/valid/graph*.json" --valid
-     */
     create_tests("graph", "valid", ["edge", "keyvalue", "matrix", "node"]);
 }
 
 
 const valid_initialState_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/initialState.json \
-     *    -r "schemas/{edge,keyvalue,graph,matrix,node}.json" \
-     *    -d "test/valid/initialState*.json" --valid
-     */
-    create_tests("initialState", "valid", ["edge", "keyvalue", "graph", "matrix", "node"]);
+    create_tests("initialState", "valid", 
+                ["edge", "keyvalue", "graph", "matrix", "node"]);
 }
 
 
 const valid_jaal_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/jaal.json \
-     *    -r "schemas/{definitions,edge,event,graph,initialState,keyvalue,matrix,metadata,node,style}.json" \
-     *    -d "test/valid/jaal*.json" --valid
-     */
-    create_tests("jaal", "valid", ["definitions", "edge", "event", "graph", "initialState", "keyvalue", "matrix", "metadata", "node", "style"]);
+    create_tests("jaal", "valid", 
+                ["definitions", "edge", "event", "graph", "initialState", 
+                "keyvalue", "matrix", "metadata", "node", "style"]);
 }
 
 
 const valid_keyvalue_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/keyvalue.json \
-     *  -r "schemas/{edge,graph,matrix,node}.json" \
-     *  -d "test/valid/keyvalue*.json" --valid
-     */
     create_tests("keyvalue", "valid", ["edge", "graph", "matrix", "node"]);
 }
 
 const valid_matrix_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/matrix.json \
-     *  -r "schemas/{edge,keyvalue,graph,node}.json" \
-     *  -d "test/valid/matrix*.json" --valid
-     */
     create_tests("matrix", "valid", ["edge", "keyvalue", "graph", "node"]);
 }
 
 const valid_metadata_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/metadata.json \
-     *  -d "test/valid/metadata*.json" --valid
-     */
     create_tests("metadata", "valid");
 }
 
 const valid_node_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/node.json \
-     *  -r "schemas/{edge,graph,keyvalue,matrix}.json" -d "test/valid/node*.json" --valid
-     */
     create_tests("node", "valid", ["edge", "graph", "keyvalue", "matrix"]);
 }
 
 
 const invalid_definitions_tests = () => {
-    /**
-     * Equivalent: 
-     * ajv test --spec=draft2020 -s schemas/definitions.json \
-     *    -r "schemas/{event,style}.json" -d "test/invalid/definitions*.json" --invalid
-     */
     create_tests("definitions", "invalid", ["event", "style"]);
 }
 
 
 const invalid_edge_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/edge.json \
-     *   -d "test/invalid/edge*.json" --invalid
-     */
     create_tests("edge", "invalid");
 }
 
 
 const invalid_event_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/event.json \
-     *    -d "test/invalid/event*.json" --invalid
-     */
     create_tests("event", "invalid");
 }
 
 
 const invalid_graph_tests = () => {
-    /**
-     * Equivalent: 
-     * ajv test --spec=draft2020 -s schemas/graph.json \
-     *    -r "schemas/{edge,keyvalue,matrix,node}.json" -d "test/invalid/graph*.json" --invalid
-     */
     create_tests("graph", "invalid", ["edge", "keyvalue", "matrix", "node"]);
 }
 
 const invalid_initialState_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/initialState.json \
-     *    -r "schemas/{edge,keyvalue,graph,matrix,node}.json" \
-     *    -d "test/invalid/initialState*.json" --invalid
-     */
-    create_tests("initialState", "invalid", ["edge", "keyvalue", "graph", "matrix", "node"]);
+    create_tests("initialState", "invalid", 
+                ["edge", "keyvalue", "graph", "matrix", "node"]);
 }
 
 const invalid_jaal_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/jaal.json -r schemas/metadata.json \
-     *  -d "test/invalid/jaal*.json" --invalid --errors=text
-     * NOTE: AJV wrong here, mathced with -r as in the valid JAAL tests. 
-     */
-    create_tests("jaal", "invalid", ["definitions", "edge", "event", "graph", "initialState", "keyvalue", "matrix", "metadata", "node", "style"]);
+    create_tests("jaal", "invalid", 
+                ["definitions", "edge", "event", "graph", "initialState", 
+                "keyvalue", "matrix", "metadata", "node", "style"]);
 }
 
 
 const invalid_keyvalue_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/keyvalue.json \
-     *  -r "schemas/{edge,graph,matrix,node}.json" \
-     *  -d "test/invalid/keyvalue*.json" --invalid
-     */
     create_tests("keyvalue", "invalid", ["edge", "graph", "matrix", "node"]);
 }
 
 
 const invalid_matrix_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/matrix.json \
-     *  -r "schemas/{edge,graph,keyvalue,node}.json" \
-     *  -d "test/invalid/matrix*.json" --invalid
-     */
     create_tests("matrix", "invalid", ["edge", "graph", "keyvalue", "node"]);
 }
 
 
 const invalid_metadata_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/metadata.json \
-     *  -d "test/invalid/metadata*" --invalid --errors=text
-     */
     create_tests("metadata", "invalid");
 }
 
 
 const invalid_node_tests = () => {
-    /**
-     * ajv test --spec=draft2020 -s schemas/node.json \
-     *  -r "schemas/{edge,graph,keyvalue,matrix}.json" -d "test/invalid/node*.json" --invalid
-     */
     create_tests("node", "invalid", ["edge", "graph", "keyvalue", "matrix"]);
 }
 
 
 function main() {
-    /***
-     * TODO: extend with parameters to determine which tests to run
-     ***/
-
     console.log("--- Valid schemas -----------------------------");
     valid_edge_tests();
     valid_event_tests();
