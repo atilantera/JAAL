@@ -20,22 +20,13 @@ JAAL is specified with [JSON schema](https://json-schema.org).
 The schemas can be easily validated with the command-line tool *ajv-cli*.
 
 1. Install [node.js](https://nodejs.org).
-2. Install [ajv-cli](https://www.npmjs.com/package/ajv-cli)
-   (e.g. from command line `npm install -g ajv-cli`)
-3. Install [json-schema-ref-parser](https://github.com/APIDevTools/json-schema-ref-parser)
-   (e.g. from command line `npm install @apidevtools/json-schema-ref-parser`)
+2. Install [npm](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
+3. Install required node.js libraries from command line:
+   `npm install`
 
 The convenience scripts *test.sh* and *build.sh* require
 [Bash](https://www.gnu.org/software/bash/), but one can easily do without it;
 see the contents of those files.
-
-### Versions
-
-The schemas have been tested with the following software.
-
-node.js 12.16.3
-ajv-cli 5.0.0
-json-schema-ref-parser 9.0.9
 
 ## Running tests
 
