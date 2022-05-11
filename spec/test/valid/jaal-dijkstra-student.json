@@ -40,15 +40,61 @@
         }
       ],
       "score": {
-        "modelSteps": 11,
-        "studentSteps": 15,
-        "correctSteps": 5,
-        "undoSteps": 2
+        "modelSteps": 10,
+        "studentSteps": 3,
+        "correctSteps": 2,
+        "undoSteps": 0
       },
       "modelAnswer": [
         {
-          "type": "operation",
-          "time": 0
+          "type": "click",
+          "time": 1,
+          "object": "edge0"
+        }, 
+        {
+          "type": "click", 
+          "time": 2, 
+          "object": "edge1"
+        }, 
+        {
+          "type": "click", 
+          "time": 3, 
+          "object": "edge7"
+        }, 
+        {
+          "type": "click", 
+          "time": 4, 
+          "object": "edge8"
+        }, 
+        {
+          "type": "click", 
+          "time": 5, 
+          "object": "edge4"
+        }, 
+        {
+          "type": "click", 
+          "time": 6, 
+          "object": "edge13"
+        }, 
+        {
+          "type": "click", 
+          "time": 7, 
+          "object": "edge2"
+        }, 
+        {
+          "type": "click", 
+          "time": 8, 
+          "object": "edge11"
+        }, 
+        {
+          "type": "click", 
+          "time": 9, 
+          "object": "edge5"
+        }, 
+        {
+          "type": "click", 
+          "time": 10, 
+          "object": "edge16"
         }
       ]
     },
