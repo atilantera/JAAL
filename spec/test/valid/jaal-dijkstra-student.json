@@ -112,7 +112,7 @@
             {
               "id": "nodeB",
               "key": "B", 
-              "style": "visited"
+              "style": "unvisited"
             },
             {
               "id": "nodeC",
@@ -127,7 +127,7 @@
             {
               "id": "nodeE",
               "key": "E", 
-              "style": "visited"
+              "style": "unvisited"
             },
             {
               "id": "nodeF",
@@ -147,7 +147,7 @@
             {
               "id": "nodeI",
               "key": "I", 
-              "style": "visited"
+              "style": "unvisited"
             },
             {
               "id": "nodeJ",
@@ -172,7 +172,7 @@
             {
               "id": "nodeN",
               "key": "N", 
-              "style": "visited"
+              "style": "unvisited"
             },
             {
               "id": "nodeO",
@@ -185,13 +185,13 @@
               "id": "edge0",
               "node": [ "nodeA", "nodeB" ],
               "tag": "5", 
-              "style": "selected"
+              "style": "unselected"
             },
             {
               "id": "edge1", 
               "node": ["nodeA", "nodeE"], 
               "tag": "5", 
-              "style": "selected"
+              "style": "unselected"
             },
             {
               "id": "edge2", 
@@ -257,7 +257,7 @@
               "id": "edge12", 
               "node": ["nodeI", "nodeN"], 
               "tag": "7", 
-              "style": "selected"
+              "style": "unselected"
             },
             {
               "id": "edge13", 
