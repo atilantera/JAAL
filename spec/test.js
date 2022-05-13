@@ -1,6 +1,8 @@
 const Ajv2020 = require("ajv/dist/2020");
 const { assert } = require("console");
 const fs = require("fs");
+var tests_passed = 0;
+var tests_failed = 0;
 
 /**
  * create_tests finds the test cases for the schema as located in 
@@ -31,7 +33,6 @@ const create_tests = (schema_name, validity, dependencies) => {
         } else {
             assert(!validate_schema(schema, files[i], validity, dependent_on));
         }
-        
     }
 }
 
@@ -83,10 +84,27 @@ const validate_schema = (schema, test_file, validity, dependencies = []) => {
     const valid = validate(test_case);
 
     if (valid) {
-        console.log(test_file, "is a valid schema.");
+        if (validity === "valid") {
+            tests_passed++;
+        } else {
+            const file = "/" + validity + "/" + test_file;
+            console.log("Test", file, 
+                        "passed validation although it should not.");
+            tests_failed++;
+        }
     } else {
-        console.log(test_file, "is not a valid schema.");
-        console.log(validate.errors);
+        const file = "/" + validity + "/" + test_file;
+        if (validity === "valid") {
+            console.log("Test", file, 
+                        "failed validation although it should not.");
+            console.log(validate.errors); 
+            tests_failed++;   
+        } else {
+            console.log("Test " + file +  ":");
+            console.log(validate.errors);
+            tests_passed++;
+        }
+        
     }
     return valid;
 };
@@ -203,7 +221,6 @@ const invalid_style_tests = () => {
 
 
 function main() {
-    console.log("--- Valid schemas -----------------------------");
     valid_edge_tests();
     valid_event_tests();
     valid_definitions_tests();
@@ -216,7 +233,6 @@ function main() {
     valid_node_tests();
     valid_style_tests();
 
-    console.log("--- Invalid schemas -----------------------------");
     invalid_definitions_tests();
     invalid_edge_tests();
     invalid_event_tests();
@@ -229,6 +245,8 @@ function main() {
     invalid_node_tests();
     invalid_style_tests();
     
+    console.log(String(tests_passed), "tests passed,", 
+                String(tests_failed), "tests failed");
 }
 
 
