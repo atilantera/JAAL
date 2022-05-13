@@ -105,7 +105,7 @@ const validate_schema = (schema, test_file, validity, dependencies = []) => {
              * The expected error is stored in the errorInstancePath
              * and errorMessage field of the test files. 
              */
-            
+
             console.log("Test " + file +  ":");
             console.log("\t", validate.errors[0].instancePath, 
                               validate.errors[0].message);
@@ -116,7 +116,6 @@ const validate_schema = (schema, test_file, validity, dependencies = []) => {
                 test_case.errorMessage === message) {
                 tests_passed++;
             } else {
-                console.log(validate.errors);
                 console.log("Expected error: ", test_case.errorInstancePath, 
                             test_case.errorMessage);
                 tests_failed++;
