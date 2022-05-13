@@ -1,5 +1,7 @@
 {
   "description": "An Edge cannot have only one node.",
   "id": "edge1",
-  "node": [ "node1" ]
+  "node": [ "node1" ], 
+  "errorInstancePath": "/node", 
+  "errorMessage": "must NOT have fewer than 2 items"
 }

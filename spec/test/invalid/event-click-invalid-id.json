@@ -2,5 +2,7 @@
   "description": "An Event whose object reference has an invalid id value.",
   "type": "click",
   "time": 1500,
-  "object": "multiedge1"
+  "object": "multiedge1", 
+  "errorInstancePath": "/object", 
+  "errorMessage": "must match pattern \"^edge|graph|keyvalue|matrix|node\""
 }
