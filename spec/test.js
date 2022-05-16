@@ -100,9 +100,26 @@ const validate_schema = (schema, test_file, validity, dependencies = []) => {
             console.log(validate.errors); 
             tests_failed++;   
         } else {
+            /**
+             * Make sure that the correct error is produced. 
+             * The expected error is stored in the errorInstancePath
+             * and errorMessage field of the test files. 
+             */
+
             console.log("Test " + file +  ":");
-            console.log(validate.errors);
-            tests_passed++;
+            console.log("\t", validate.errors[0].instancePath, 
+                              validate.errors[0].message);
+            const instancePath = validate.errors[0].instancePath;
+            const message = validate.errors[0].message;
+                        
+            if (test_case.errorInstancePath === instancePath && 
+                test_case.errorMessage === message) {
+                tests_passed++;
+            } else {
+                console.log("Expected error: ", test_case.errorInstancePath, 
+                            test_case.errorMessage);
+                tests_failed++;
+            }
         }
         
     }

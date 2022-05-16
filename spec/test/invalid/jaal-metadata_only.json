@@ -1,4 +1,6 @@
 {
   "description": "A JAAL recording with only Metadata present is invalid.",
-  "metadata": {}
+  "metadata": {}, 
+  "errorInstancePath": "", 
+  "errorMessage": "must have required property 'definitions'"
 }
