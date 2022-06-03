@@ -8,8 +8,7 @@
       "name": "Dijkstra's algorithm from OpenDSA",
       "collection": "JAAL schema testdata",
       "runningLocation": "https://grader.cs.aalto.fi/static/traky2021/OpenDSA/AV/Development/DijkstraPE.html"
-    },
-    "simulationStart": "2021-10-08T14:20:00.000Z"
+    }
   },
   "definitions": {
     "description": "A minimal Definitions schema.",
