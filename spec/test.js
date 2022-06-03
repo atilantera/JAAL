@@ -132,7 +132,7 @@ const valid_event_tests = () => {
 
 
 const valid_definitions_tests = () => {
-    create_tests("definitions", "valid", ["event", "style"]);
+    create_tests("definitions", "valid", ["event"]);
 }
 
 const valid_graph_tests = () => {
@@ -149,7 +149,7 @@ const valid_initialState_tests = () => {
 const valid_jaal_tests = () => {
     create_tests("jaal", "valid",
                 ["definitions", "edge", "event", "graph", "initialState",
-                "keyvalue", "matrix", "metadata", "node", "style"]);
+                "keyvalue", "matrix", "metadata", "node"]);
 }
 
 
@@ -170,13 +170,8 @@ const valid_node_tests = () => {
 }
 
 
-const valid_style_tests = () => {
-    create_tests("style", "valid");
-}
-
-
 const invalid_definitions_tests = () => {
-    create_tests("definitions", "invalid", ["event", "style"]);
+    create_tests("definitions", "invalid", ["event"]);
 }
 
 
@@ -202,7 +197,7 @@ const invalid_initialState_tests = () => {
 const invalid_jaal_tests = () => {
     create_tests("jaal", "invalid",
                 ["definitions", "edge", "event", "graph", "initialState",
-                "keyvalue", "matrix", "metadata", "node", "style"]);
+                "keyvalue", "matrix", "metadata", "node"]);
 }
 
 
@@ -226,11 +221,6 @@ const invalid_node_tests = () => {
 }
 
 
-const invalid_style_tests = () => {
-    create_tests("style", "invalid");
-}
-
-
 function main() {
     const test_time = "Tests run in";
     console.time(test_time);
@@ -245,7 +235,6 @@ function main() {
     valid_matrix_tests();
     valid_metadata_tests();
     valid_node_tests();
-    valid_style_tests();
 
     invalid_definitions_tests();
     invalid_edge_tests();
@@ -257,7 +246,6 @@ function main() {
     invalid_matrix_tests();
     invalid_metadata_tests();
     invalid_node_tests();
-    invalid_style_tests();
 
     console.timeEnd(test_time);
 
