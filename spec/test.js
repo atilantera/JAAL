@@ -97,7 +97,7 @@ const validate_schema = (schema, test_file, validity, dependencies = []) => {
         }
     } else {
         if (validity === "valid") { // Expect invalid, validation passed
-            console.log("Test", file, "should not fail validation!.");
+            console.log("Test", test_file, "should not fail validation!.");
             console.log(validate.errors);
             tests_failed++;
         } else {                    // Expect invalid, validation failed

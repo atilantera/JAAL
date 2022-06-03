@@ -1,0 +1,23 @@
+{
+  "description": "An undirected, weighted graph.",
+  "id": "graph1",
+  "node": [
+    { "id": "nodeA", "key": "A" },
+    { "id": "nodeB", "key": "B" }
+  ],
+  "edge": [
+    {
+      "id": "edgeAB",
+      "node": [ "nodeA", "nodeB" ],
+      "tag": "2"
+    },
+    {
+      "id": "edgeBA",
+      "node": [ "nodeB", "nodeA" ],
+      "tag": "2"
+    }
+  ],
+  "directed": true,
+  "dsClass": "graph",
+  "dsSubClass": "weighted"
+}

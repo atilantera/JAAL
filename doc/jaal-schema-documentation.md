@@ -109,6 +109,8 @@ A graph data structure for representing lists, trees, and graphs.
 The graph is the most generic structure. Trees are graphs without loops.
 Lists are linear trees: each node has at most one children.
 
+Multigraphs are possible in JAAL 1.1, but not intended behaviour. Hypergraphs are explicitly forbidden as an edge must have exactly two nodes it is connected to. 
+
 Some applications:
 - lists (linked list)
 - trees
