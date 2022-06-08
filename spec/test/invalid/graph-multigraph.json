@@ -1,0 +1,26 @@
+{
+    "description": "An undirected, weighted graph.",
+    "id": "graph1",
+    "node": [
+      { "id": "nodeA", "key": "A" },
+      { "id": "nodeB", "key": "B" }
+    ],
+    "edge": [
+      {
+        "id": "edgeAB",
+        "node": [ "nodeA", "nodeB" ],
+        "tag": "2"
+      },
+      {
+        "id": "edgeAB",
+        "node": [ "nodeA", "nodeB" ],
+        "tag": "2"
+      }
+    ],
+    "directed": true,
+    "dsClass": "graph",
+    "dsSubClass": "weighted",
+    "errorInstancePath": "/edge", 
+    "errorMessage": "must NOT have duplicate items (items ## 0 and 1 are identical)"
+}
+  
