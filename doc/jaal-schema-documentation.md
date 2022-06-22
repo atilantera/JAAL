@@ -58,6 +58,7 @@ Properties:
   - UndoCount increases every time the student clicks the Undo button.
     It is handled by the JAAL recorder.
 
+- modelAnswer: the model solution of the exercise. This is stored as either an array of events, or as an array of array of events. In the 2-D array of events case, the intended behaviour is that one step is a major step that matches what the student should be doing, with optional extra minor narration steps. 
 
 ## edge.json
 
