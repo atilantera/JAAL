@@ -1,5 +1,6 @@
 {
   "description": "An Event where the previous event was undoed after 1.5 seconds.",
   "type": "undo",
-  "time": 1500
+  "time": 1500,
+  "gradable": false
 }
