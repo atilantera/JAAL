@@ -102,6 +102,10 @@ Properties:
   - `operation` is a data structure operation. This is used at least in the
      model answer.
   - `narration` means that the narrative text in the model answer changes.
+- time: the time in milliseconds since the start of the simulation. Must be an integer.
+- object: the name of a JAAL data structure that is referenced with the current event. Must start with `edge`, `graph`, `keyvalue`, `matrix`, or `node`. 
+- gradable: a boolean to indicate whether the current event responds to a gradable step. 
+- image: a string representation of an SVG image. 
 
 ## graph.json
 
