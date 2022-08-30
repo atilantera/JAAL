@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jaal.fi/schemas/matrix.json",
-  "title": "JAAL 1.1 matrix",
+  "title": "JAAL matrix",
   "description": "A one- or two-dimensional array with fixed number of rows and columns.",
   "type": "object",
   "properties": {

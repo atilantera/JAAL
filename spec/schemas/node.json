@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jaal.fi/schemas/node.json",
-  "title": "JAAL 1.1 node",
+  "title": "JAAL node",
   "description": "Generic data structure for an array cell, a list node, a tree node, and a graph node.",
   "type": "object",
   "properties": {
