@@ -12,6 +12,7 @@
     "@apidevtools/json-schema-ref-parser": "^9.0.9"
   },
   "scripts": {
+    "build": "npx genversion version.js",
     "test": "node test.js"
   },
   "repository": {
