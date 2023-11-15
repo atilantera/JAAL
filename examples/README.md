@@ -10,9 +10,9 @@ using the [JSAV framework](https://jsav.io).
 
 This exercise is about Prim's minimal spanning tree algorithm. A screenshot
 of the user interface of the exercise is shown in file
-`Prim+Binheap-GUI.png``.
+`Prim+Binheap-GUI.png`.
 
-![](./Dijkstra+Binheap-GUI.png)
+![](./Prim+Binheap-GUI.png)
 
 The exercise visualizes the input of the algorithm as a node-link diagram.
 The nodes circles are labeled with unique alphabets from A to W. The edges
