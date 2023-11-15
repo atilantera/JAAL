@@ -118,6 +118,7 @@ First, note that we can compare student's solution to model solution. Here it is
 done manually by listing the actions. The student enqueues (enq), updated (upd)
 or dequeues (deq) edges in the priority queue or clicks the undo button (undo).
 
+```
 Student          Model
 --------------------------------------------------------
  1 enq AB         2.1 enq AB
@@ -144,6 +145,7 @@ Student          Model
 22 undo          23.1 deq IN
 23 upd EI->IN
 24 deq IN
+```
 
 (Yes, there is not enough semantic data in the model answer in this recording,
 therefore the priority queues actions in the model solution have been
