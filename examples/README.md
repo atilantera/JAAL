@@ -32,9 +32,18 @@ to the spanning tree.
 
 #### Description
 
-`Prim+Binheap1.json` is the JAAL data for a submission to the exercise.
-`Prim+Binheap1.html` is the corresponding human-readable representation
-of the file.
+`Prim+Binheap1.json` is the JAAL data for a submission to the exercise:
+                     pretty-printed JSON in ASCII character set.
+
+`html/Prim+Binheap1.html` is the corresponding human-readable representation
+of the file produced with the script `jaal2html.py`
+
+`Prim+Binheap1.encoded.json` is an *encoded* version of the data in the file
+Prim+Binheap1.json: the JSON string is HTML escaped, then zlib compressed and
+finally Base64 encoded. JSAV Exercise Recorder uses this kind of wrapping
+encoding to (i) minimize the size of JAAL data sent to a learning management
+system (LMS); (ii) ensure that the data will not be escaped in other ways by
+the LMS. The data can be decoded with the script `decoding_test.py`.
 
 Here is a short description of the data in Prim+Binheap1.html. The strings
 beginning with a `$` are JSON paths which refer to the corresponding
