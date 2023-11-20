@@ -341,10 +341,12 @@ The `svg` object of the `initialState` object is Scalable Vector Graphics
 representation of the initial state. Note that the SVG has been further
 escaped, including the following codes:
 
+```
 Escaped     Unescaped
 ---------------------------------
 \"          "
 \\n         newline
+```
 
 # $.animation: Student's solution
 
