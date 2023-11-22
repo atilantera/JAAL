@@ -50,41 +50,38 @@ from Visual Algorithm Simulation Exercises.](http://urn.fi/URN:NBN:fi:aalto-2020
 
 ## Specification
 
-The current version (year 2023) for JAAL is 2.0.
+The current version for JAAL is 2.0.
 
-Features
+JAAL 2.0 has a formal specification in [JSON Schema](https://json-schema.org/).
+The JSON Schema for JAAL is in the subdirectory `spec`.
 
+JAAL 1.0 has no formal specification; it is implicitly specified by its
+model implementation.
 
+### Demonstrations
 
-### Specification
-
-This Github repository contains the specification and design documents for
-JAAL 1.1, the JSON-based Algorithm Animation Language.
-
-### Software
-
-Currently there is no software supporting JAAL 1.1.
-
-## JAAL 1.0
-
-
-
-### Demonstration
+JAAL 2.0 can be tested with the testbench of
+[JSAV Exercise Recorder](https://github.com/Aalto-LeTech/jsav-exercise-recorder/blob/jaal2.0/README.md#introduction-with-testbench).
 
 [A demo of JAAL 1.0](https://jsav-player-test-app.web.app) features the
 following exercises: Insertion Sort, Heap Build, Dijkstra's algorithm,
-Evaluating Postfix Expression, and search in a Binary Search Tree. The
+Evaluating Postfix Expression, and search in a Binary Search Tree.
 
-### Literature
+### Software
 
+#### JAAL 2.0
 
+* [JSAV Exercise
+  Recorder 2.0](https://github.com/Aalto-LeTech/jsav-exercise-recorder/tree/jaal2.0)
+  (git branch `jaal2.0`) records at least Prim's and Dijkstra's JSAV exercises.
+  See [Introduction with testbench](https://github.com/Aalto-LeTech/jsav-exercise-recorder/blob/jaal2.0/README.md#introduction-with-testbench) in the main README of the Exercise Recorder's repository.
 
-### Specification
+* [JSAV Exercise Player
+  2.0](https://github.com/Aalto-LeTech/jsav-exercise-player/tree/jaal2.0) (git
+  branch `jaal2.0`) is designed to play JAAL 2.0 recordings. However, it is not
+  under active development.
 
-JAAL 1.0 has no formal specification; it is implicitly specified by its
-model implementation (software).
-
-### Source Code
+#### JAAL 1.0
 
 * [JSAV Exercise Recorder](https://github.com/MarianiGiacomo/jsav-exercise-recorder/)
 saves student's solution for a [JSAV](http://jsav.io)/[OpenDSA](https://opendsa-server.cs.vt.edu/) exercise as JAAL 1.0.
