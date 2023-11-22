@@ -1,4 +1,11 @@
-# Representation of various data structures in JAAL 1.1
+# Representation of exercise data structures in JAAL
+
+This document describes how exercise-bound generic data structures
+should be represented in JAAL.
+
+## Lists
+
+Lists are implemented with the Graph schema.
 
 ## Trees
 
