@@ -22,3 +22,6 @@ releases (versions).
 File `jaal-schema-documentation.md` contains the detailed descriptions of
 the JAAL JSON Schema subschemas and fields.
 
+## Old JAAL versions
+
+Older JAAL versions have some documentation in the subdirectory `versions`.
