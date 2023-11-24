@@ -2,14 +2,41 @@
 
 ## Introduction
 
+**What** | The JSON-based Algorithm Animation Language (JAAL) is a data format
+for representing students' solutions to algorithm visualization exercises.
+In practice, it has been designed to record students' answers to interactive
+exercises made with the [JSAV framework](http://jsav.io) that are included in
+[OpenDSA electronic textbook](https://opendsa-server.cs.vt.edu/) . JAAL has a
+formal specification in [JSON Schema](https://json-schema.org/).
+
+**Why** | JAAL is intended to support [learning analytics](https://en.wikipedia.org/wiki/Learning_analytics) for
+[algorithm visualization](https://dl.acm.org/doi/10.1145/1821996.1821997).
+
+*Algorithm visualization* (or visual algorithm simulation) exercises are 
+computerized exercises to teach data structures and algorithms at 
+university-level computing education. An algorithm visualization exercise
+displays the student a data structure, like array containing integers. The
+student interacts with the visualization by changing the state of the data
+structure, e.g. clicking array elements to swap their values. This way the
+student simulates the steps of an algorithm, e.g. insertion sort.
+
+*Learning analytics* means collecting data on students' actions in an
+electronic learning environment for students and instructors to understand
+learning. JAAL has two use cases. First, after a student has 
+attempted to solve an algorithm visualization exercise, they could compare
+their solution steps to the model answer to verify which in steps they
+succeeded. Second, the course instructor or a researcher may study
+students' incorrect solutions to an exercise to understand the mistakes
+that students often make. This analysis supports improving the learning 
+material and finding misconceptions related to a particular topic.
+
+For more information, see the section [Scientific literature](#references).
+
+**This git repository**
+
 This repository contains technical documentation, specification and examples
-for JSON-based Algorithm Animation Language (JAAL). The language is intended
-to support computing education research in universities. JAAL is a JSON-based
-data format to store students' answers to visual algorithm simulation /
-algorithm visualization exercises. In practice, it has been designed to
-record students' answers to interactive exercises made with
-[http://jsav.io](JSAV) that are included in
-[https://opendsa-server.cs.vt.edu/](OpenDSA) .
+for JSON-based Algorithm Animation Language (JAAL).
+
 
 ## Features
 
@@ -95,17 +122,6 @@ exercises. This test data has examples of:
 - [array](spec/test/valid/matrix-1d-vertical.json)
 - [2D array](spec/test/valid/matrix-2d.json)
 
-## Scientific Literature
-
-To read more about the design and purpose of JAAL, see the following
-publication.
-
-Artturi Tilanterä, Giacomo Mariani, Ari Korhonen, Otto Seppälä. [Towards a JSON-based Algorithm Animation Language](https://doi.org/10.1109/VISSOFT52517.2021.00026) In *2021 Working Conference on Software Visualization (VISSOFT)*. IEEE, 2021.
-
-The first prototype of JAAL was originally developed as a master's thesis at
-Aalto University: Giacomo Mariani. [Design of an Application to Collect Data and Create Animations
-from Visual Algorithm Simulation Exercises.](http://urn.fi/URN:NBN:fi:aalto-202005313418) Master's thesis, Aalto University School of Science, 2020.
-
 ## Specification
 
 The current version for JAAL is 2.0.
@@ -152,3 +168,52 @@ exercise service which provides JSAV/OpenDSA exercises and stores JAAL 1.0
 recordings.
 
 * [JSAV Player Application Test App](https://github.com/MarianiGiacomo/jsav-player-application-test-app) is the frontend of the demonstration application.
+
+## Scientific literature {#references}
+
+### Algorithm visualization
+
+Clifford A. Shaffer, Matthew L. Cooper, Alexander Joel D. Alon, Monika Akbar,
+Michael Stewart, Sean Ponce, and Stephen H. Edwards. 2010. *Algorithm
+Visualization: The State of the Field*. ACM Trans. Comput. Educ. 10, 3,
+Article 9 (August 2010), 22 pages. https://doi.org/10.1145/1821996.1821997
+
+### Students' errors in algorithm visualization
+
+Otto Seppälä, Lauri Malmi, and Ari Korhonen. 2006. *Observations on student misconceptions—A case study of the Build – Heap Algorithm*. Computer Science Education, 16:3, 241-255. https://doi.org/10.1080/08993400600913523
+
+Ville Karavirta, Ari Korhonen, and Otto Seppälä. 2013. *Misconceptions in Visual Algorithm Simulation Revisited: On UI's Effect on Student Performance, Attitudes and Misconceptions*. 2013 Learning and Teaching in Computing and Engineering, Macau, Macao, 2013, pp. 62-69, https://doi.org/10.1109/LaTiCE.2013.35
+
+### JSAV and OpenDSA
+
+Ville Karavirta and Clifford. A. Shaffer. 2016. *Creating Engaging Online
+Learning Material with the JSAV JavaScript Algorithm Visualization Library*. In
+IEEE Transactions on Learning Technologies, vol. 9, no. 2, pp. 171-183, 1
+April-June 2016. https://doi.org/10.1109/TLT.2015.2490673
+
+Ville Karavirta and Clifford A. Shaffer. 2013. *JSAV: the JavaScript algorithm visualization library*. In Proceedings of the 18th ACM conference 
+on Innovation and technology in computer science education (ITiCSE '13). Association for Computing Machinery, New York, NY, USA, 159–164. https://doi.org/10.1145/2462476.2462487
+
+Eric Fouh, Ville Karavirta, Daniel A. Breakiron, Sally Hamouda, Simin Hall,
+Thomas L. Naps, Clifford A. Shaffer. 2014. *Design and architecture of an
+interactive eTextbook – The OpenDSA system*. Science of Computer Programming,
+Volume 88, 2014, Pages 22-40, ISSN 0167-6423.
+https://doi.org/10.1016/j.scico.2013.11.040     
+
+
+
+### Design and purpose of JAAL
+
+To read more about the design and purpose of JAAL, see the following
+publication.
+
+Artturi Tilanterä, Giacomo Mariani, Ari Korhonen, Otto Seppälä. 2021. 
+*Towards a JSON-based Algorithm Animation Language*. 2021 Working Conference 
+on Software Visualization (VISSOFT), Luxembourg, 2021, pp. 135-139. https://doi.org/10.1109/VISSOFT52517.2021.00026
+
+The first prototype of JAAL was originally developed as a master's thesis at
+Aalto University.
+
+Giacomo Mariani. 2020. *Design of an Application to Collect Data and Create
+Animations from Visual Algorithm Simulation Exercises*. School of
+Science, Aalto University. http://urn.fi/URN:NBN:fi:aalto-202005313418
