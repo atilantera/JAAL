@@ -35,7 +35,8 @@ For more information, see the section [Scientific literature](#references).
 **This git repository**
 
 This repository contains technical documentation, specification and examples
-for JSON-based Algorithm Animation Language (JAAL).
+for JSON-based Algorithm Animation Language (JAAL). See the section 
+[Software](#software) for software which reads and writes JAAL.
 
 
 ## Features
@@ -141,7 +142,7 @@ JAAL 2.0 can be tested with the testbench of
 following exercises: Insertion Sort, Heap Build, Dijkstra's algorithm,
 Evaluating Postfix Expression, and search in a Binary Search Tree.
 
-### Software
+### Software {#software}
 
 #### JAAL 2.0
 
