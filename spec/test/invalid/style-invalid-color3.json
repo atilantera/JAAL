@@ -1,5 +1,7 @@
 {
   "comment": "A Style where the text-color lacks the # character",
   "name": "testStyle",
-  "text-color": "a0b3451"
+  "text-color": "a0b3451", 
+  "errorInstancePath": "/text-color", 
+  "errorMessage": "must match pattern \"^#([0-9]|[a-f]){6}$\""
 }

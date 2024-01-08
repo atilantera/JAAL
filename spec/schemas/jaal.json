@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jaal.fi/schemas/jaal.json",
-  "title": "JAAL 1.1",
+  "title": "JAAL 2.0",
   "description": "JSON-based algorithm animation language",
   "type": "object",
   "properties": {

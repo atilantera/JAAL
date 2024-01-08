@@ -1,5 +1,7 @@
 {
   "description": "A Style where the text-color is too short a string.",
   "name": "testStyle",
-  "text-color": "#a0b34"
+  "text-color": "#a0b34", 
+  "errorInstancePath": "/text-color", 
+  "errorMessage": "must match pattern \"^#([0-9]|[a-f]){6}$\""
 }

@@ -1,3 +1,5 @@
 {
-  "description": "JAAL data cannot be empty."
+  "description": "JAAL data cannot be empty.", 
+  "errorInstancePath": "", 
+  "errorMessage": "must have required property 'metadata'"
 }

@@ -7,5 +7,7 @@
     { "id": "node1", "key": "A" },
     { "id": "node2", "key": "B" },
     { "id": "node3", "key": "C" }
-  ]
+  ], 
+  "errorInstancePath": "/key/0", 
+  "errorMessage": "must be array"
 }

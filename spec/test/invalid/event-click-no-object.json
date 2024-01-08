@@ -1,5 +1,7 @@
 {
   "description": "An Event which has no type.",
   "type": "click",
-  "time": 1500
+  "time": 1500, 
+  "errorInstancePath": "", 
+  "errorMessage": "must have required property 'object'"
 }

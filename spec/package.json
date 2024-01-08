@@ -1,0 +1,42 @@
+{
+  "name": "jaal",
+  "version": "2.0",
+  "description": "JSON-based Algorithm Animation Language",
+  "main": " ",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ajv": "^8.11.0",
+    "@apidevtools/json-schema-ref-parser": "^9.0.9"
+  },
+  "scripts": {
+    "build": "npx genversion version.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aalto-LeTech/JAAL.git"
+  },
+  "keywords": [
+    "jsav"
+  ],
+  "contributors": [
+    {
+      "name": "Johanna Sänger",
+      "email": "johanna.sanger@aalto.fi",
+      "url": "https://github.com/Meratyn/"
+    },
+    {
+      "name": "Artturi Tilanterä",
+      "email": "artturi.tilantera@iki.fi",
+      "url": "https://github.com/atilante/"
+    }
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Aalto-LeTech/JAAL/issues"
+  },
+  "homepage": "https://github.com/Aalto-LeTech/JAAL#readme"
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jaal.fi/schemas/event.json",
-  "title": "JAAL 1.1 event",
+  "title": "JAAL event",
   "description": "An event in JAAL 1.1 recording. An event is a time-dependent user action.",
   "type": "object",
   "properties": {
@@ -19,6 +19,14 @@
       "description": "Reference to a JAAL data structure or the Undo button.",
       "type": "string",
       "pattern": "^edge|graph|keyvalue|matrix|node"
+    },
+    "gradable": {
+      "description": "Boolean value to indicate whether the current event is considered a gradable step.",
+      "type": "boolean"
+    },
+    "image" : {
+      "description": "A string containing an SVG representation of the image",
+      "type": "string"
     }
   },
   "if": {

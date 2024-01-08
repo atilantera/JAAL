@@ -2,5 +2,7 @@
   "description": "An Event which has an invalid type.",
   "type": "an unknown event",
   "time": 1500,
-  "object": "edge1"
+  "object": "edge1", 
+  "errorInstancePath": "/type", 
+  "errorMessage": "must match pattern \"^click|grade|undo|operation|narration$\""
 }

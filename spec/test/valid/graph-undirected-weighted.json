@@ -75,11 +75,6 @@
       "tag": "9"
     },
     {
-      "id": "edgeHL",
-      "node": [ "nodeH", "nodeL" ],
-      "tag": "9"
-    },
-    {
       "id": "edgeIM",
       "node": [ "nodeI", "nodeM" ],
       "tag": "7"

@@ -1,0 +1,310 @@
+{
+    "description": "Dijkstra's algorithm exercise recording",
+    "metadata": {
+      "jaalVersion": "1.1",
+      "jaalGenerator": "manual",
+      "browser": "none",
+      "exercise": {
+        "name": "Dijkstra's algorithm from OpenDSA",
+        "collection": "JAAL schema testdata",
+        "runningLocation": "https://grader.cs.aalto.fi/static/traky2021/OpenDSA/AV/Development/DijkstraPE.html"
+      }
+    },
+    "definitions": {
+      "description": "A minimal Definitions schema.",
+      "styles": [
+        {
+          "name": "visited",
+          "description": "Visited node, has yellow background.",
+          "text-color": "#000000",
+          "fill-color": "#fff050"
+        },
+        {
+          "name": "unvisited",
+          "description": "Unvisited node, has white background.",
+          "text-color": "#000000",
+          "fill-color": "#ffffff"
+        },
+        {
+          "name": "unselected",
+          "description": "Unselected edge, orange-grey",
+          "text-color": "#000000",
+          "fill-color": "#d59f0d"
+        },
+        {
+          "name": "selected",
+          "description": "An edge which is included to the single-source shortest path tree. Bright yellow.",
+          "text-color": "#000000",
+          "fill-color": "#ffe000"
+        }
+      ],
+      "score": {
+        "modelSteps": 10,
+        "studentSteps": 3,
+        "correctSteps": 2,
+        "undoSteps": 0
+      },
+      "modelAnswer": [
+        {
+          "type": "click",
+          "time": 1,
+          "object": "edge0"
+        }, 
+        {
+          "type": "click", 
+          "time": 2, 
+          "object": "edge1"
+        }, 
+        {
+          "type": "click", 
+          "time": 3, 
+          "object": "edge7"
+        }, 
+        {
+          "type": "click", 
+          "time": 4, 
+          "object": "edge8"
+        }, 
+        {
+          "type": "click", 
+          "time": 5, 
+          "object": "edge4"
+        }, 
+        {
+          "type": "click", 
+          "time": 6, 
+          "object": "edge13"
+        }, 
+        {
+          "type": "click", 
+          "time": 7, 
+          "object": "edge2"
+        }, 
+        {
+          "type": "click", 
+          "time": 8, 
+          "object": "edge11"
+        }, 
+        {
+          "type": "click", 
+          "time": 9, 
+          "object": "edge5"
+        }, 
+        {
+          "type": "click", 
+          "time": 10, 
+          "object": "edge16"
+        }
+      ]
+    },
+    "initialState": {
+      "description": "A vertical array and a temp variable.",
+      "dataStructures": [
+        {
+          "id": "graph0",
+          "node": [
+            {
+              "id": "nodeA",
+              "key": "A", 
+              "style": "visited"
+            },
+            {
+              "id": "nodeB",
+              "key": "B", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeC",
+              "key": "C", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeD",
+              "key": "D", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeE",
+              "key": "E", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeF",
+              "key": "F", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeG",
+              "key": "G", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeH",
+              "key": "H", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeI",
+              "key": "I", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeJ",
+              "key": "J", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeK",
+              "key": "K", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeL",
+              "key": "L", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeM",
+              "key": "M", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeN",
+              "key": "N", 
+              "style": "unvisited"
+            },
+            {
+              "id": "nodeO",
+              "key": "O", 
+              "style": "unvisited"
+            }
+          ], 
+          "edge": [
+            {
+              "id": "edge0",
+              "node": [ "nodeA", "nodeB" ],
+              "tag": "5", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge1", 
+              "node": ["nodeA", "nodeE"], 
+              "tag": "5", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge2", 
+              "node": ["nodeB", "nodeC"], 
+              "tag": "7", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge3", 
+              "node": ["nodeB", "nodeE"], 
+              "tag": "4", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge4", 
+              "node": ["nodeB", "nodeF"], 
+              "tag": "5", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge5", 
+              "node": ["nodeB", "nodeG"], 
+              "tag": "8", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge6", 
+              "node": ["nodeC", "nodeG"], 
+              "tag": "3", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge7", 
+              "node": ["nodeE", "nodeI"], 
+              "tag": "4", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge8", 
+              "node": ["nodeE", "nodeJ"], 
+              "tag": "4", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge9", 
+              "node": ["nodeG", "nodeJ"], 
+              "tag": "9", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge10", 
+              "node": ["nodeH", "nodeL"], 
+              "tag": "7", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge11", 
+              "node": ["nodeI", "nodeM"], 
+              "tag": "3", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge12", 
+              "node": ["nodeI", "nodeN"], 
+              "tag": "7", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge13", 
+              "node": ["nodeJ", "nodeN"], 
+              "tag": "2", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge14", 
+              "node": ["nodeK", "nodeL"], 
+              "tag": "6", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge15", 
+              "node": ["nodeM", "nodeN"], 
+              "tag": "5", 
+              "style": "unselected"
+            },
+            {
+              "id": "edge16", 
+              "node": ["nodeN", "nodeO"], 
+              "tag": "9", 
+              "style": "unselected"
+            }
+          ],
+          "directed": false,
+          "dsClass": "graph", 
+          "dsSubClass": "Dijkstra's algorithm graph" 
+        }
+      ]
+    },
+    "animation": [
+      {
+        "type": "click",
+        "time": 1,
+        "object": "edge0"
+      }, 
+      {
+        "type": "click", 
+        "time": 2, 
+        "object": "edge1"
+      }, 
+      {
+        "type": "click", 
+        "time": 3, 
+        "object": "edge12"
+      }
+    ]
+  }
+  

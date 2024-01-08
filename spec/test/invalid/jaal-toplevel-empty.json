@@ -3,5 +3,7 @@
   "metadata": {},
   "definitions": {},
   "initialState": {},
-  "animation": {}
+  "animation": {}, 
+  "errorInstancePath": "/metadata", 
+  "errorMessage": "must have required property 'jaalVersion'"
 }

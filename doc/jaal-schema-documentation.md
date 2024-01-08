@@ -58,14 +58,7 @@ Properties:
   - UndoCount increases every time the student clicks the Undo button.
     It is handled by the JAAL recorder.
 
-- simulationStart: A timestamp: when the exercise is loaded and the JAAL
-  recorder begins recording. The timestamp is in the ISO 8601 format:
-  `YYYY-MM-DDTHH:mm:ss.sssZ`, for example, 2021-10-05T12:57:22.831Z
-  meaning "5th October 2021 12:57 hours + 22.831 seconds, in the UTC time zone".
-  This timestamp shows when the student has begun working on the exercise.
-  For research purposes, it might be useful to have the timestamp inside the
-  JAAL recording instead of retrieving the exercise submission time from the
-  learning management system storing JAAL recordings.
+- modelAnswer: the model solution of the exercise. This is stored as either an array of events, or as an array of array of events. In the 2-D array of events case, the intended behaviour is that one step is a major step that matches what the student should be doing, with optional extra minor narration steps. 
 
 ## edge.json
 
@@ -109,6 +102,10 @@ Properties:
   - `operation` is a data structure operation. This is used at least in the
      model answer.
   - `narration` means that the narrative text in the model answer changes.
+- time: the time in milliseconds since the start of the simulation. Must be an integer.
+- object: the name of a JAAL data structure that is referenced with the current event. Must start with `edge`, `graph`, `keyvalue`, `matrix`, or `node`. 
+- gradable: a boolean to indicate whether the current event responds to a gradable step. 
+- image: a string representation of an SVG image. 
 
 ## graph.json
 
@@ -116,6 +113,8 @@ A graph data structure for representing lists, trees, and graphs.
 
 The graph is the most generic structure. Trees are graphs without loops.
 Lists are linear trees: each node has at most one children.
+
+Multigraphs are possible in JAAL 1.1, but not intended behaviour. Hypergraphs are explicitly forbidden as an edge must have exactly two nodes it is connected to. 
 
 Some applications:
 - lists (linked list)
