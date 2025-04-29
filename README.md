@@ -1,5 +1,19 @@
 # JAAL - JSON-based Algorithm Animation Language
 
+![JAAL recording of an algorithm simulation exercise.](examples/jaal2html-example.png)
+
+Figure above: JAAL recording of an algorithm simulation exercise of Prim's
+algorithm. The graph with circular nodes A-N is the problem instance for
+the exercise. Student simulates the execution steps of Prim's minimum
+spanning tree algorithm by clicking the edges in order the algorithms adds
+them to the spanning tree. Clicked edges appear yellow with bolder line.
+The figure shows student's two first steps: add edges AB, and BF.
+
+The figure above is a human-readable HTML conversion of a JAAL recording.
+JAAL records student's steps in two ways. First, there is **semantics**: which
+edge is clicked and when. Second, there is **graphics**, which are snapshots
+of student's view of the exercise as they are solving it.
+
 ## Introduction
 
 **What** | The JSON-based Algorithm Animation Language (JAAL) is a data format
