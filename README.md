@@ -1,5 +1,7 @@
 # JAAL - JSON-based Algorithm Animation Language
 
+## Visual summary
+
 ![JAAL recording of an algorithm simulation exercise.](examples/jaal2html-example.png)
 
 Figure above: JAAL recording of an algorithm simulation exercise of Prim's
@@ -59,7 +61,7 @@ can be
 [automatically validated](https://json-schema.org/implementations#validators)
 to support **data exchange** between different software systems.
 
-For more information, see the section [Scientific literature](#references).
+For more information, see the section [Publications](#publications).
 
 **This git repository**
 
@@ -184,7 +186,7 @@ JAAL 2.0 can be tested with the testbench of
 following exercises: Insertion Sort, Heap Build, Dijkstra's algorithm,
 Evaluating Postfix Expression, and search in a Binary Search Tree.
 
-### Software {#software}
+### Software
 
 #### JAAL 2.0
 
@@ -212,7 +214,7 @@ recordings.
 
 * [JSAV Player Application Test App](https://github.com/MarianiGiacomo/jsav-player-application-test-app) is the frontend of the demonstration application.
 
-## Scientific literature {#references}
+## Publications
 
 ### Algorithm visualization
 
